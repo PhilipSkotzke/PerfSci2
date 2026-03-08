@@ -8,11 +8,12 @@ about: # https://quarto.org/docs/websites/website-about.html
   template: trestles
   links:
     - text: "{{< iconify mdi:linkedin size=xl >}} LinkedIn"
-      href: https://linkedin.com/in/philip-skotzke/
+      href: https://linkedin.com/in/philip-skotzke/{target=_blank}
     - text: "{{< iconify academicons:researchgate-square size=xl >}} ResearchGate"
-      href: https://www.researchgate.net/profile/Philip-Skotzke
+      href: https://www.researchgate.net/profile/Philip-Skotzke{target=_blank}
     - text: "{{< iconify fa6-brands:square-bluesky size=xl >}} Bluesky"
-      href: https://bsky.app/profile/philipskotzke.bsky.social
+      href: https://bsky.app/profile/philipskotzke.bsky.social{target=_blank}
+comments: false
 ---
 
 {{< include _language_chooser.md >}}

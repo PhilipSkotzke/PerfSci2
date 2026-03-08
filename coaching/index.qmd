@@ -1,5 +1,6 @@
 ---
 title: Coaching
+comments: false
 ---
 
 ![](banner.jpg){.img-fluid .rounded}

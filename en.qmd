@@ -13,6 +13,7 @@ about: # https://quarto.org/docs/websites/website-about.html
       href: https://www.researchgate.net/profile/Philip-Skotzke
     - text: "{{< iconify fa6-brands:square-bluesky size=xl >}} Bluesky"
       href: https://bsky.app/profile/philipskotzke.bsky.social
+comments: false
 ---
 
 {{< include _language_chooser.md >}}

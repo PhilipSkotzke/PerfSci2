@@ -12,6 +12,7 @@ page-layout: full
 title-block-banner: false
 date-format: "DD.MM.YYYY"
 toc: true
+comments: false
 ---
 
 As scientists we are doing our own little research, creating new knowledge and presenting it to our peers. With this blog I am trying to take the next step: Provide research insights and communicate scientific ideas to a broader audience.
