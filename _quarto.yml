@@ -35,9 +35,9 @@ website:
     language: de
  #  google-analytics: <insert ID>
   
-comments: 
-  giscus:
-    repo: /PhilipSkotzke/PerfSci2
+# comments: 
+#   giscus:
+#     repo: /PhilipSkotzke/PerfSci2
 
 format:
   html:
