@@ -1,0 +1,27 @@
+---
+title: "Evidence based versus evidence informed coaching"
+description: "Repeatedly athletes and coaches claim to follow a scientific training regime - why this probably is no the case."
+author: "Philip Skotzke"
+image: "post1_thumbnail.png"
+date: "2-10-2026"
+date-modified: "2-10-2026"
+date-format: "DD MMM YYYY"
+draft: true # don't render post
+categories: [opinion, coaching]
+---
+
+We discovered that there is no *scientific* training. Still, we can leverage science in the training process. This is typically referred to as *evidence-based* or *evidence-informed* training.
+
+## Evidence-based vs. Evidence-informed training
+
+As mentioned above, science aims to generate general truths. Most research in sport science is conducted to be applicable and guide decision making. The knowledge generated is extensively democratized and leads to drastically improved training programs, better nutrition strategies and understanding of recovery compared to 20 years ago.
+
+When translating scienctific knowledge and applying it in the work with athletes, there is one important aspect to consider: Due to the nature of science it can tell us what will work for most athletes but it doesn't tell if it the best for one specific athlete. And it does this in a very specific way.
+
+Let's examplify this: We read a study comparing different
+
+There is a second dimension I didn't touch on so far. I believe many people claiming to do scientific training are saying their training is *evidence-based*. But what does that even mean? Read a study comparing different HIT interval protocols and apply the best study? If you are doing this, you're fallen for a trap: Research use extreme protocols to maximize the primary variance between different protocols. If you base your training on extreme levels, you don't apply the scientific *knowledge*, you're simply replicating what researchers thought would be good to test their hypothesis.
+
+A few years ago X&Y have published a scientific article in **journal x** (ref), highlighting this misconception. They propose the term *evidence-informed* as sensible alternative. It puts the athlete, coach or practitioner into the position to synthesize a broad range of scientific literature and then take out the specific aspects they deem relevant for a specific athlete in a specific situation.
+
+I will challenge any coach who claims they provide *scientific training* or even *evidence-based training*. Creating an evidence-informed system takes time.

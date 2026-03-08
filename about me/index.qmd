@@ -1,0 +1,136 @@
+---
+title: "Über mich"
+---
+
+
+::: {.grid}
+
+::: {class="g-col-12 g-col-md-6"}
+
+Ich bin **Philip**, Coach, Sportwissenschaftler und jemand, der Sport wirklich lebt. Ob beim **Triathlontraining**, auf einer **Bikepacking-Tour** durch die Berge oder beim **Wildwasser-Kajakfahren** - Bewegung ist nicht nur ein Hobby, sondern ein zentraler Teil meines Lebens.
+
+In meiner **Forschung** als Sportwissenschaftler beschäfitge ich mich mit Ermüdung und dem Einsatz moderner **Wearables** im Ausdauertraining, etwa zur Messung der Muskelsauer-stoffsättigung. Diese wissenschaftliche Perspektive kombiniere ich in meiner Arbeit mit langjähriger Praxiserfahrung.
+
+:::
+
+::: {class="g-col-12 g-col-md-6"}
+![](img_01.jpg){.img-fluid .rounded}
+:::
+
+:::
+
+Schon mit **14 Jahren** stand ich das erste Mal als Schwimmtrainer am Beckenrand. Seitdem durfte ich Athlet\*innen in ganz unterschiedlichen Bereichen begleiten: Vom **Kinderschwimmen** über **Nachwuchs- und Profi-Triathlon** bis hin zum **Kajak Guide**.
+
+Diese Vielfalt prägt meine Arbeit - und genau das gebe ich im Coaching weiter.
+
+
+::: {.grid}
+
+::: {class="g-col-12 g-col-md-6"}
+![](img_02.jpg){.img-fluid .rounded}
+:::
+
+::: {class="g-col-12 g-col-md-6"}
+## Meine Philosophie
+
+Sport muss vor allem **Spaß machen**. Ich arbeite gerne sehr ambitioniert und optimiere die letzten Details, um das Beste herauszuholen - aber das ist keine Vorausetzung für meine Athlet*innen. Wenn du Freude an dem hast, was du tust - ganz egal deiner sportlichen Ziele - führt das automatisch zu persönlichem Erfolg.
+
+Deshalb begleite ich **Sportler\*innen mit ganz unterschiedlichen Zielen**. Jede Situation erfordert eine individuelle Herangehensweise – und genau diese Erfahrung bringe ich in mein Coaching ein.
+:::
+:::
+
+::: {.grid}
+
+::: {class="g-col-12 g-col-md-6"}
+## Wissenschaftliche Arbeit
+
+Als Doktorstudent in der Sportwissenschaft (**University of Rome "Foro Italico"**) habe ich mich auf **Ausdauersport**, **Leistungsphysiologie-** und **diagnostik** spezialisiert.
+
+Durch mehrere eigene Forschungsprojekte, ein Forschungspraktikum bei Prof. Stephen Seiler - einem der führenden Experten im Ausdauersport - sowie weitere internationale Kooperationen bin ich bestens vernetzt.
+
+Meine Arbeit fokussiert sich darauf, neue Methoden in Diagnostik, Trainingssteuerung und Trainingsmethodik zu entwickeln. Dabei ist mir die Übertragung von wissenschaftlichen Erkenntnissen in die Praxis besonders wichtig.
+
+:::
+
+::: {class="g-col-12 g-col-md-6"}
+![](img_03.jpg){.img-fluid .rounded}
+:::
+:::
+
+## Qualifikationen
+
+ - M.Sc. High-Performance Sport, Universität des Saarlandes
+ - C-Lizenz Triathlon (Leistungssport)
+ - B-Lizenz Fitnesstrainer
+ - DLRG Ausbilder Schwimmen & Rettungsschwimmen
+
+
+## Sportliche Momente
+
+::: {.grid}
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](img_04.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](img_05.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](img_12.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](img_07.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](img_08.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](img_09.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](img_10.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](img_11.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](img_06.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](img_16.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](img_14.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](img_15.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](img_13.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](img_17.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](img_18.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](img_19.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+:::

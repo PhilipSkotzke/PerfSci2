@@ -1,0 +1,57 @@
+---
+title: "*Performance Science^2^*"
+subtitle: | 
+  **Philip Skotzke** \
+  *Sportwissenschafler | Trainer | Forscher*
+image: profile.jpg
+about: # https://quarto.org/docs/websites/website-about.html
+  template: trestles
+  links:
+    - text: "{{< iconify mdi:linkedin size=xl >}} LinkedIn"
+      href: https://linkedin.com/in/philip-skotzke/
+    - text: "{{< iconify academicons:researchgate-square size=xl >}} ResearchGate"
+      href: https://www.researchgate.net/profile/Philip-Skotzke
+    - text: "{{< iconify fa6-brands:square-bluesky size=xl >}} Bluesky"
+      href: https://bsky.app/profile/philipskotzke.bsky.social
+---
+
+{{< include _language_chooser.md >}}
+
+Hi! Ich bin **Philip** - Sportwissenschaftler, Trainer und leidenschaftlicher Sportler. Ich helfe Athlet\*innen dabei, ihre Ziele zu erreichen - egal ob im Triathlon, Radsport oder Laufen.
+
+::: text-center
+[Jetzt Coaching entdecken](coaching/index.qmd){.link-box}
+:::
+
+## Blog
+
+Der Blog ist das Herzstück meiner Website. Hier teile ich Einblicke in wissenschaftliche Themen, Trainingsratschläge und vieles mehr (auf English).
+
+::: text-center
+[Zum Blog <img src="images/flag_en.svg" width="24">](posts/index.qmd){.link-box-acc}
+:::
+
+## Coaching
+
+Egal, welches Ziel du verfolgst - ich erstelle **maßgeschneiderte Trainingspläne** und biete individuelle Betreuung, damit du dein Ziel erreichst.
+
+Ob erster Triathlon, persönliche Marathon-Bestzeit oder der Ötztaler Radmarathon – ich begleite dich Schritt für Schritt.
+
+::: text-center
+[Mehr erfahren](coaching/index.qmd){.link-box}
+:::
+
+## Über mich
+
+Leidenschaft trifft auf Expertise. Ich kombiniere **praktische Coaching-Erfahrung** mit wissenschaftlicher Kompetenz:
+
+- Doktorstudium Sportwissenschaft/Leistungsphysiologie
+- M.Sc. High Performance Sport
+- C-Trainer Lizenz Triathlon
+- Langjährige Erfahrung im Hobby-, Nachwuchs- und Profisport
+
+Lese über meine Motivation, meine Philosophie und meine sportliche Leidenschaft.
+
+::: text-center
+[Lern mich kennen](about%20me/index.qmd){.link-box-acc}
+:::

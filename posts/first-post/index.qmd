@@ -1,0 +1,52 @@
+---
+title: "What is scientific training - and does it exist?"
+description: "Repeatedly athletes and coaches claim to follow a scientific training regime - why this probably is no the case."
+author: "Philip Skotzke"
+image: "post1_thumbnail.png"
+date: "2-10-2026"
+date-modified: "2-10-2026"
+date-format: "DD MMM YYYY"
+draft: false # don't render post
+categories: [opinion, coaching]
+---
+
+Hi, this is Philip on Performance Science^2^, and this is my first blog post. Have some patience with my language not being as sharp as it could be. I'm expecting (hoping) to get better! In this first blog post I will dive into the idea of **scientific training** - and why it's often a misperceived.
+
+## Motivation
+
+> *In 2023, when the "Norwegian Hype Train" was moving fast, winning all major triathlon races, a young Australian brought the train to an abrupt halt - at least for a short moment. Max Neumann from Australia won the men's PTO European Open race and didn't stop at the finish line. In the post race interview he was shooting against the Norwegians, and attributed his victory to his "**no bullshit science**" approach* ([video](https://www.youtube.com/shorts/gkhg09N305A))*, receiving wide applause. Indeed, the Norwegian triathletes are famous for training equipped with dozens of sensor-technology and measuring lactate constantly. Often this extensive monitoring program is characterized as **scientific training**.*
+
+Maybe the Norwegians never claimed themselves to do scientific training but the quote from Max Neumann echos a common notion: There is something like *scientific* *training*.
+
+Let's **stop** here and take a step back. What does *science* even mean? Does *scientific training* exist?
+
+## What is science?
+
+You may be surprised to read that even scientists don't agree on a definition of science. Characetistics found in many definitions are:
+
+-   Science is a system. It is structured in organizations that follow common practices ("rituals")
+-   Science aims to generate generalizable knowledge ("truths")
+-   Science tests hypotheses generated from prior knowledge
+-   Science uses specialized methods
+
+There are some parallels with what in sports generally is considered *scientific training*:
+
+-   **Technology use** - While some technology is well-established (e.g heart rate sensors and power meters), novel devices such as core temperature sensors (and pills) or muscle oxygenation monitors are becoming used more frequently. This trend originates in *technology transfer* and democratization of knowledge.
+-   **Personalized insights** *-* technology is used to understand the athlete's response to training and how they recover in real world conditions.
+-   **Precise training control** - the insights are then used to execute training sessions and maximize adaptation potential while minimizing recovery needs.
+
+Next to the similarities there are some relevant differences:
+
+Training usually does not aim to generate knowledge applicable beyond a single athlete. When done right, technology can be used to understand how *one* athlete handles a training session. However, training is performed in varying environments (e.g. hot summer day versus mild spring), complicating generalizability. If we acknowledge that athletes respond differently to training, it becomes clear that it is hard to generate new knowledge.
+
+The final point is about hypothesis testing. Smart coaches and athletes can use technology to test if a new training method resulted in performance gains. There is one problem though: In science, experimental conditions are strictly controlled to test the cause-effect of a single variable. This is unrealistic with real athletes. When preparing for a competition many aspects are changed at once: Nutrition is optimized, different intervals are performed while doing a training block in altitude. Consequently, the athlete will know the *combination o*f all these things leads to a good performance but it is impossible to quantify individual contributions.
+
+As we can see, training can approximate and *mimic* scientific principles. This assumes that the coach-athlete team really is meaningfully using the data to form hypothesis on training responses and critically evaluates them to create an *explicit* understanding on the athlete's training response. From my experience all the tech typically is used to create an *implicit* understanding of an athlete, their strengths, weaknesses and response characteristics. Yet, it is in the core of science to clearly understand cause-effect relationships. Therefore, I would argue that all the fancy-looking social media content and coaches boasting about being scientific is about one thing: **Marketing**
+
+## The false claim
+
+So far we discovered that science is defined by specific characteristics that will differ vastly from working with individual athletes. Both worlds exist in paralell and can learn from each other. The scientist looks at what athletes are doing and tries to understand it. The coach takes knowledge and applies it to a training program. They form a strong synergy.
+
+But why do coaches claim to b.
+
+We discovered that there is no *scientific* training. Still, we can leverage science in the training process. This is typically referred to as *evidence-based* or *evidence-informed* training.

@@ -1,0 +1,40 @@
+project:
+  type: website
+
+website:
+  title: "PS^2^ - Performance Science Squared"
+  description: "Das ist die persönliche Webseite von Philip Skotzke."
+  open-graph: true # https://quarto.org/docs/websites/website-tools.html#open-graph
+  page-footer: 
+    left: |
+      © 2026 Philip Skotzke
+    right: |
+    #  [Impressum](/impressum/)
+  search: false
+  navbar:
+    right:
+      - text: Blog
+        href: posts/index.qmd
+        icon: vector-pen
+      - text: Coaching
+        href: coaching/index.qmd
+        icon: stopwatch
+      - text: About me
+        href: about me/index.qmd
+      #- text: Mehr
+      #  menu: 
+      #    - text: Impressum       
+      #      href: impressum/
+    tools:
+      - icon: linkedin
+        href: https://linkedin.com/in/philip-skotzke/
+        target: _blank
+      
+  #cookie-consent:
+  #  type: express
+  #  language: de
+  # google-analytics: <insert ID>
+  
+format:
+  html:
+    theme: [cosmo, styles.scss]

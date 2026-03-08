@@ -1,0 +1,258 @@
+/*-- scss:defaults --*/
+
+// Sass Variables
+// https://quarto.org/docs/output-formats/html-themes.html#sass-variables
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* Color palette */
+$theme-wh: #fff;
+$theme-bl: #000;
+$theme-gr: #F4F4F4;
+$theme-c1: #0077FF;
+$theme-c2: #FF6B35;
+
+
+/* Fonts */
+$font-family-sans-serif: "Poppins", sans-serif;
+$font-size-root: 18px;
+
+
+/*-- scss:rules --*/
+
+/* HEADINGS */
+h1, h2, h3, h4 {
+  text-transform: uppercase;
+  color: $theme-bl;
+  letter-spacing: 0.5px;
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  background-color: rgba($theme-wh, 0.9);
+  color: $theme-bl;
+  border-bottom: 2px solid lighten($theme-c1, 30%);
+  margin: 0;
+
+
+  a, span.navbar-title{
+    color: $theme-bl;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  
+    &:hover{
+    color: $theme-c1;
+    } 
+  } 
+}
+
+/* OPTIONAL: active nav link styling */
+.navbar a.active {
+  color: $theme-c1;
+  font-weight: bold;
+  border-bottom: 2px solid $theme-c1;
+}
+
+/* LINK BOXES (CTA Buttons) */
+.link-box {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  border: 2px solid $theme-c1;
+  border-radius: 8px;
+  background-color: $theme-c1;
+  color: $theme-wh;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.25s ease;
+
+  &:hover {
+    background-color: $theme-c2; /* Orange on hover = draws attention */
+    border-color: $theme-c2;
+    color: $theme-wh;
+    transform: translateY(-2px);
+  }
+}
+
+.link-box-acc {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  border: 2px solid $theme-c2;
+  border-radius: 8px;
+  background-color: $theme-c2;
+  color: $theme-wh;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.25s ease;
+
+  &:hover {
+    background-color: darken($theme-c2, 10%); /* Orange on hover = draws attention */
+    border-color: darken($theme-c2, 10%);
+    color: $theme-wh;
+    transform: translateY(-2px);
+  }
+}
+
+.card-testimonial {
+  background-color: $theme-wh;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+
+  p {
+    font-style: italic;
+    color: $theme-bl;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid $theme-c1;
+    }
+
+    strong {
+      color: $theme-c1;
+    }
+
+    div {
+      line-height: 1.2;
+    }
+  }
+}
+
+/* SERVICE / FEATURE CARDS */
+.card-leistung {
+  background-color: lighten($theme-c1, 45%);
+  border: 2px solid lighten($theme-c1, 10%);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    border-color: $theme-c1;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+  }
+}
+
+
+/* PACKAGE CARDS (highlight offers or plans) */
+.card-package {
+  background-color: $theme-c1;
+  color: $theme-wh;
+  border: 2px solid $theme-c2;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+
+  h2, h3, h4, .price {
+    color: lighten($theme-c2, 10%);
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
+
+  &:hover {
+    background-color: darken($theme-c1, 7%);
+    border-color: darken($theme-c2, 15%);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+  }
+  background-image: linear-gradient(
+    to bottom right, 
+    $theme-c1, 
+    lighten($theme-c1, 10%)
+  );
+}
+
+/* SECTION BACKGROUNDS */
+@mixin fullwidth-section($bg,$color: inherit) {
+  background-color: $bg !important;
+  color: $color;
+  padding: 1rem 1rem;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  width: 100vw;
+   
+   > * {
+    max-width: 1150px;   /* match Quarto’s main content width */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;    /* small padding for mobile */
+  }
+  
+
+}
+
+/* VARIANTS  */ 
+.bg-black {
+  @include fullwidth-section($theme-bl, $theme-wh);
+}
+
+.bg-light {
+  @include fullwidth-section($theme-wh, $theme-bl);
+}
+
+.bg-accent {
+  @include fullwidth-section(darken($theme-c1, 10%), $theme-wh);
+}
+
+.bg-gray {
+  @include fullwidth-section($theme-gr, $theme-bl);
+}
+
+/* ACCENT STRIP / CTA AREA */
+.bg-highlight {
+  @include fullwidth-section($theme-c2, $theme-wh);
+}
+
+/* IMAGE EFFECTS */
+.hover-zoom {
+  transition: transform 0.3s ease-in-out;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+
+/* FOOTER */
+footer {
+  border-top: 2px solid lighten($theme-c1, 30%);
+  background: $theme-wh;   
+  color: $theme-bl;
+  padding: 1.0rem 0;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  background-color: rgba($theme-wh, 0.9);
+
+  a {
+    color: $theme-c1;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: darken($theme-c1, 15%);
+    }
+  }
+}
