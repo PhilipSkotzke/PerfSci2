@@ -7,14 +7,14 @@ listing:
   type: default
   categories: false
   sort-ui: false
-  filter-ui: false
+  filter-ui: true
 page-layout: full
 title-block-banner: false
 date-format: "DD.MM.YYYY"
-toc: true
+toc: false
 comments: false
 ---
 
-As scientists we are doing our own little research, creating new knowledge and presenting it to our peers. With this blog I am trying to take the next step: Provide research insights and communicate scientific ideas to a broader audience.
+As scientists we are focused on conducting our own research, creating new knowledge and presenting it to our peers. Here I am trying to take the next step for my own work: I aim to provide additional research insights and communicate scientific ideas to a broader audience.
 
 Topics will range from research article discussions, opinion pieces and coaching thoughts.

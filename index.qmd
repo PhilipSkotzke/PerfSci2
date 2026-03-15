@@ -2,17 +2,20 @@
 title: "*Performance Science^2^*"
 subtitle: | 
   **Philip Skotzke** \
-  *Sportwissenschafler | Trainer | Forscher*
+  *Sportwissenschafler | Trainer | Athlet*
 image: profile.jpg
 about: # https://quarto.org/docs/websites/website-about.html
-  template: trestles
+  template: broadside
   links:
     - text: "{{< iconify mdi:linkedin size=xl >}} LinkedIn"
       href: https://linkedin.com/in/philip-skotzke/{target=_blank}
+      target: _blank
     - text: "{{< iconify academicons:researchgate-square size=xl >}} ResearchGate"
       href: https://www.researchgate.net/profile/Philip-Skotzke{target=_blank}
+      target: _blank
     - text: "{{< iconify fa6-brands:square-bluesky size=xl >}} Bluesky"
-      href: https://bsky.app/profile/philipskotzke.bsky.social{target=_blank}
+      href: https://bsky.app/profile/philipskotzke.bsky.social
+      target: _blank
 comments: false
 ---
 
@@ -26,7 +29,7 @@ Hi! Ich bin **Philip** - Sportwissenschaftler, Trainer und leidenschaftlicher Sp
 
 ## Blog
 
-Der Blog ist das Herzstück meiner Website. Hier teile ich Einblicke in wissenschaftliche Themen, Trainingsratschläge und vieles mehr (auf English).
+In meinem Blog teile ich Einblicke in wissenschaftliche Themen, Trainingsratschläge und vieles mehr (auf English).
 
 ::: text-center
 [Zum Blog <img src="images/flag_en.svg" width="24">](posts/index.qmd){.link-box-acc}

@@ -2,12 +2,14 @@ project:
   type: website
 
 website:
-  title: "PS^2^ - Performance Science Squared"
+  title: "PS^2^"
   description: "Das ist die persönliche Webseite von Philip Skotzke."
   open-graph: true # https://quarto.org/docs/websites/website-tools.html#open-graph
   page-footer: 
     left: |
       © 2026 Philip Skotzke
+    center: |
+      Performance Science Squared
     right: |
     #  [Impressum](/impressum/)
   search: false
@@ -35,9 +37,9 @@ website:
     language: de
  #  google-analytics: <insert ID>
   
-# comments: 
-#   giscus:
-#     repo: /PhilipSkotzke/PerfSci2
+comments:
+  giscus: 
+    repo: PhilipSkotzke/PerfSci2
 
 format:
   html:

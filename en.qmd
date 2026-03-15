@@ -2,10 +2,10 @@
 title: "*Performance Science^2^*"
 subtitle: | 
   **Philip Skotzke** \
-  *Sport Sciencist | Coach | Researcher*
+  *Sport Sciencist & Researcher | Coach | Athlete*
 image: profile.jpg
 about: # https://quarto.org/docs/websites/website-about.html
-  template: trestles
+  template: broadside
   links:
     - text: "{{< iconify mdi:linkedin size=xl >}} LinkedIn"
       href: https://linkedin.com/in/philip-skotzke/

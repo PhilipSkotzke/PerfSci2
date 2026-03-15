@@ -1,0 +1,478 @@
+---
+title: "Case Study of changes in SmO~2~ in a youth development cylcist"
+author: Philip Skotzke
+date: last-modified # change!
+format:
+  html:
+    code-fold: true
+    fig-width: 6
+    fig-height: 4
+    fig-cap-location: top
+editor: visual
+draft: true # don't render post
+execute:  
+  warning: false
+tbl-cap-location: top
+---
+
+callout: the analytical code is available by clicking on the "code" buttons throughout the case report.
+
+```{r}
+#| label: SetUp
+
+library(dplyr)
+library(ggplot2)
+library(ggtext)
+library(lubridate)
+library(patchwork)
+library(sysfonts)
+library(showtext)
+library(grid)
+library(tidyr)
+library(renv)
+library(remotes)
+#remotes::install_github("jemarnold/mnirs")
+library(mnirs)
+#renv::init()
+#renv::snapshot()
+
+source("../../theme_blog.R")
+```
+
+## Introduction
+
+Near-infrared spectroscopy allows to investigate muscle oxygenation non-invasively. The technology has been proposed to complement traditional measures in endurance performance testing by providing insights into peripheral changes. However, there is a lack of longitudinal studies investigating how peripheral muscle oxygen saturation (SmO~2~) changes with improving fitness and endurance performance. The lack of longitudinal data over long periods such as single or multiple seasons in well-trained athletes is understandable as training interventions are difficult to conduct on sufficiently large samples of competitive athletes. For these instances where data collection is not feasible or even impossible, well-conducted case reports provide unique value to better understand the phenomena of interest (**ref**).
+
+Here, the SmO~2~ response of a youth development cyclist during a laboratory based performance test is presented over a period of more than 2 years.
+
+## Athlete Characteristics
+
+The athlete in this case study is male and was 18 years old at the first test performed in August 2023 and just started training seriously for road cycling in that year. His previous sporting background was in **edit** before he started cycling at age **16** for fun. Because of his good performances, the athlete quickly became motivated to pursue the sport more seriously.
+
+General athlete charcteristics are presented in @tbl-characteristics. The athlete performed the same laboratory performance test 4 times over a period of 4 years (for details read "Methods"). Traditional performance measures over the investigation period are summarized in @tbl-test-data.
+
+|                        | Value |
+|------------------------|-------|
+| Sex                    | Male  |
+| Height \[cm\]          | 178   |
+| Start cycling \[year\] |       |
+
+: General athlete characteristics {#tbl-characteristics}
+
+| Measure | August 2023 | November 2023 | Mai 2024 | November 2025 |
+|---------------|---------------|---------------|---------------|---------------|
+| Body mass \[kg\] | 69.1 | 67.8 | 71.5 | 71 |
+| Body fat \[%\] | \- | 6.9 | 10.4 | 8.0 |
+| LT1 \[watt\] | 185 | 191 | 203 | 235 |
+| ~e~MLSS \[watt\] | 300 | 315 | 335 | 350 |
+| PPO \[watt\] | 477 | 498 | 511 | 550 |
+| ~e~$\dot{\text{V}}\text{O}_{2\text{max}}$ \[ml/min/kg\] | 71.2 | 75.5 | 73.5 | 79.2 |
+
+: Athlete Characteristics over the period of 3 years {#tbl-test-data}
+
+## Methods
+
+```{r}
+#| label: DataPrep1
+
+# To start the analysis, the data files are loaded.
+# load GXT data amd renamae
+GXT_Data <- rbind(
+  data.frame(read.csv("Test_2023_08_15.csv"), Test = "23_08"),
+  data.frame(read.csv("Test_2023_11_11.csv"), Test = "23_11"),
+  data.frame(read.csv("Test_2024_05_01.csv"), Test = "24_05"),
+  data.frame(read.csv("Test_2025_10_25.csv"), Test = "25_10")
+              ) |>
+  rename(
+    Time = secs,
+    Cadence = cad,
+    HR = hr,
+    Power = watts,
+    SmO2 = smo2,
+    tHb = thb
+  ) |>
+  select(Time, Cadence, HR,Power, SmO2, tHb, Test)
+
+# apply smoothing with mNIRS
+
+GXT_Data_clean <- data.frame()
+
+for (i in 1:4) {
+GXT_Data |>
+    filter(Test == unique(Test)[i]) |>
+    mnirs::create_mnirs_data(
+    nirs_device = "Moxy",
+    nirs_channels = "SmO2",
+    time_channel = "Time",
+    sample_rate = 2
+  ) |>
+  mnirs::filter_mnirs(
+    sample_rate = 1,
+    method = "smooth_spline",
+    spar = 0.05
+  ) |> rbind(GXT_Data_clean) -> GXT_Data_clean
+}
+
+# Ramp Data preparation
+Ramp_Data <- rbind(
+  data.frame(read.csv("Ramp_2023_08_15.csv"), Test = "23_08"),
+  data.frame(read.csv("Ramp_2023_11_11.csv"), Test = "23_11"),
+  data.frame(read.csv("Ramp_2024_05_01.csv"), Test = "24_05"),
+  data.frame(read.csv("Ramp_2025_10_25.csv"), Test = "25_10")
+              ) |>
+  rename(
+    Time = secs,
+    Cadence = cad,
+    HR = hr,
+    Power = watts,
+    SmO2 = smo2,
+    tHb = thb
+  ) |>
+  select(Time, Cadence, HR,Power, SmO2, tHb, Test)
+
+# apply smoothing with mNIRS, then filter with Time >300s
+
+Ramp_Data_clean <- data.frame()
+
+for (i in 1:4) {
+Ramp_Data |>
+    filter(Test == unique(Test)[i]) |>
+    mnirs::create_mnirs_data(
+    nirs_device = "Moxy",
+    nirs_channels = "SmO2",
+    time_channel = "Time",
+    sample_rate = 2
+  ) |>
+  mnirs::filter_mnirs(
+    sample_rate = 1,
+    method = "smooth_spline",
+    spar = 0.05
+  ) |>
+    group_by(Test) |>
+    filter(Time > 300) |>
+    mutate(Time = Time -300) |> 
+    ungroup() |>
+    rbind(Ramp_Data_clean) -> Ramp_Data_clean
+}
+
+
+# load LMT data amd renamae
+LMT_Data <- rbind(
+  data.frame(read.csv("LMT_2023_08_15.csv"), Test = "23_08"),
+  data.frame(read.csv("LMT_2023_11_11.csv"), Test = "23_11"),
+  data.frame(read.csv("LMT_2024_05_01.csv"), Test = "24_05"),
+  data.frame(read.csv("LMT_2025_10_25.csv"), Test = "25_10")
+              ) |>
+  rename(
+    Time = secs,
+    Cadence = cad,
+    HR = hr,
+    Power = watts,
+    SmO2 = smo2,
+    tHb = thb
+  ) |>
+  select(Time, Cadence, HR,Power, SmO2, tHb, Test)
+
+# apply smoothing with mNIRS
+
+LMT_Data_clean <- data.frame()
+
+for (i in 1:4) {
+LMT_Data |>
+    filter(Test == unique(Test)[i]) |>
+    mnirs::create_mnirs_data(
+    nirs_device = "Moxy",
+    nirs_channels = "SmO2",
+    time_channel = "Time",
+    sample_rate = 2
+  ) |>
+  mnirs::filter_mnirs(
+    sample_rate = 1,
+    method = "smooth_spline",
+    spar = 0.05
+  ) |> rbind(LMT_Data_clean) -> LMT_Data_clean
+}
+```
+
+### Procedures
+
+A single visit protocol with 3 separate tests was performed. At arrival, body mass and body fat percentage using the 10-skinfold method **ref** were assessed and the NIRS probe placed on the vastus lateralis (VL). The athletes own bike was mounted on an indoor bike trainer (Kickr Core, Wahoo, **...**\*) that was regularly calibrated. Then, the exercise test began, which is presented in @fig-protocol.
+
+#### Graded Exercise Test
+
+The submaximal graded exercise test (GXT) commenced, starting at 95 W with an increase of 35 W every 5 minutes. Lactate was sampled at the end of each stage. The test was terminated when the expected maximal lactate steady-state (MLSS) was reached, operationalized by a blood lactate concentration \[BLa\] $\geq$ 4 mmol/L. The main goal of the GXT was to create the submaximal \[BLa\] profile and to identify the first lactate threshold (LT1).
+
+#### Ramp Test
+
+After a rest period of a few minutes the athlete started cycling at 50 W for 5 minutes as recovery. Following one-minute of passive rest, the ramp protocol started at 100 W and increased by 25 W every 30 s. The goal of the test was to establish the peak power output (PPO) and estimate the maximal oxygen uptake (~e~$\dot{\text{V}}\text{O}_{2\text{max}}$), hence the steep increase.
+
+#### Lactate Minimum Test
+
+To obtain a physiology-based estimate of the MLSS (eMLSS), the modified lactate minimum test (mLMT, **ref**) was performed. Following the ramp test, the athlete was asked to sit passively on a chair for exactly 7 minutes for lactate to evenly distribute across the whole body. Then, the mLMT commenced at 40 W below the expected maximal lactate steady state and increased by 10 W every 90 s. Lactate was sampled at the end of each state. The test was terminated when the athlete reached voluntary exhaustion or when \[BLa\] rose for two consecutive stages, whichever occurred first.
+
+```{r}
+#| label: fig-protocol
+#| fig-cap: Design of the testing session. After the GXT (1), a ramp test (2) is performed. Following 7 minutes of passive rest, the LMT is started (3)
+
+# to visualize the data from all tests in one figure, combine the data from the 
+# GXT, Ramp and LMT from the same Test into one data frame. 
+# Adjust the Time variables
+
+end_GXT <- as.numeric(GXT_Data_clean |> filter(Test == "25_10" & Power > 10) |> summarize(Time = max(Time)))
+end_Ramp <- as.numeric(end_GXT + 300 + Ramp_Data_clean |> filter(Test == "25_10" & Power > 10) |> summarize(Time = max(Time)))
+
+protocol_data <- GXT_Data_clean |>
+  filter(Test == "25_10") |>
+  bind_rows(
+    Ramp_Data_clean |> 
+      filter(Test == "25_10") |>
+      mutate(Time = Time + end_GXT + 300,
+             Power = ifelse(Power > 90, Power, 0)),
+    LMT_Data_clean |>
+      filter(Test == "25_10") |>
+      mutate(Time = Time + end_Ramp + 420,
+             Power = ifelse(Power > 200, Power, 0))
+    ) |>
+  mutate(Time = as.duration(Time))
+
+end_Total <- max(protocol_data$Time)
+
+protocol_data |>
+  ggplot(aes(Time, Power)) +
+  geom_ribbon(aes(ymin = 0, ymax = Power), fill = clrs[5], alpha = .5) +
+  geom_vline(xintercept = c(0, end_GXT, end_GXT + 345 ,end_Ramp, end_Ramp+420, end_Total), linetype = "dashed") +
+  annotate(geom = "text",
+  x = c(0 + 60, end_GXT + 345 + 60, end_Ramp + 420 + 60),
+  y = 500,
+  label = c("(1) \nGXT","(2) \nRamp","(3) \nLMT"),
+  hjust = 0
+  ) +
+  scale_y_continuous(limits = c(0,550), breaks = seq(0,500,100)) +
+  labs(
+    x = "Time [min:sec]",
+    y = "Power Output [watt]"
+  )
+
+```
+
+### Measures
+
+#### Lactate profile and threshold determination
+
+\[BLa\] was sampled from the earlobe using a portable anaylzer (Lactate plus, **...**). LT1 was determined using the LTratio method **ref**. eMLSS is determined as power output at the mathematically derived minimum of the 3rd order polynomial fitted to the eLMT \[BLa\] data.
+
+#### ~e~$\dot{\text{V}}\text{O}_{2\text{max}}$
+
+Because access to a CPET system was not available, expired gases and $\dot{\text{V}}\text{O}_2$ could not be directly measured. Therefore, ~e~$\dot{\text{V}}\text{O}_{2\text{max}}$ was calculated from PPO using a linear regression equation. As this value is only an estimate, PPO is reported as well.
+
+#### Muscle Oxygenation
+
+A wireless and wearable NIRS device (Moxy Monitor, **...**) was placed on the right VL, approximately halfway between the trochanter major and the lateral patella. The device recorded at a sampling rate of 0.5 Hz with 10-second smoothing. The data was recorded using GoldenCheetah software (ref), which was used to control the indoor trainer in ergometer mode.
+
+### Data Processing
+
+The SmO~2~ data are exported from Golden Cheetah as .csv file for further processing using R software (ref). Raw signals are pre-processed using {mnirs} package (ref). Specifically, a smoothed spline (with spar = 0.05) was applied. No normalization of the data was applied as SmO~2~ during the first GXT stage was highly similar over time.
+
+#### GXT SmO~2~ response
+
+Average SmO~2~ for each stage was computed as mean. The rate of change in SmO~2~ (SmO~2rate~) is determined after excluding the initial 60 s and last 10s of each stage. A first SmO~2~ breakpoint (BP1) was identified visually as the first sudden change in SmO~2~ in 1) the raw data, 2) the avergaged SmO~2~ and 3) in SmO~2slope~. This was done using a 3-panel plot (**Fig X**). For raw data, the power was interpolated from the relative completion of the stage.
+
+#### Ramp SmO~2~ response
+
+w
+
+#### LMT SmO~2~ response
+
+w
+
+## SmO~2~ response over Time
+
+The full raw data are displayed in @fig-raw. Because including all 4 tests make the figures difficult to read, from now on only one test per year will be displayed
+
+```{r}
+#| label: fig-raw
+#| fig-cap: SmO~2~ responses during the full testing protocol
+#| fig-subcap: 
+#|   - GXT
+#|   - Ramp
+#|   - LMT
+#| layout-ncol: 3
+
+raw1 <- GXT_Data_clean |>
+  ggplot(aes(Time, SmO2, color = Test)) +
+  labs(
+    x = NULL,
+    y = "SmO~2~ [%]"
+  ) +
+  geom_ribbon(data = GXT_Data_clean |> filter(Test == "25_10"),
+              aes(ymin = 0,
+                  ymax = Power*(100/600)),
+              fill = "grey", 
+              color = NA,
+              alpha = 0.2, 
+              size = 0.5) +
+  geom_point(size = .5) +
+  scale_y_continuous(limits = c(0,100), breaks = seq(0,100,20)) +
+  scale_color_manual(values = c("black","grey25","grey50", "grey75"),
+                     labels = c("Aug 23", "Nov 23","Mai 24","Oct 25")) +
+  theme(
+      legend.position = "none"
+  )
+
+raw2 <- 
+Ramp_Data_clean |>
+  ggplot(aes(Time-60, SmO2, color = Test)) +
+  labs(
+    x = NULL,
+    y = NULL,
+    color = "Test Date"
+  ) +
+  geom_ribbon(data = Ramp_Data_clean |> filter(Test == "25_10"),
+              aes(xmin = min(Time),
+                  xmax = max(Time),
+                  ymin = 0,
+                  ymax = Power*(100/600),
+                  group = Test),
+              fill = "grey", 
+              color = NA,
+              alpha = 0.2, 
+              size = 0.5) +
+  geom_point(size = .5) +
+  geom_vline(xintercept = 0, linetype = 2) +
+  scale_y_continuous(limits = c(0,100), breaks = seq(0,100,20)) +
+  scale_color_manual(values = c("black","grey25","grey50", "grey75"),
+                     labels = c("Aug 23", "Nov 23","Mai 24","Oct 25")) +
+  theme(
+      legend.position = "none",
+      axis.text.y = element_blank(),
+      axis.ticks.y = element_blank()
+  )
+
+raw3 <- LMT_Data_clean |>
+  ggplot(aes(Time, SmO2, color = Test)) +
+  labs(
+    x = NULL,
+    y = NULL,
+    color = "Test Date"
+  ) +
+  geom_ribbon(data = LMT_Data_clean |> filter(Test == "25_10"),
+              aes(xmin = min(Time),
+                  xmax = max(Time),
+                  ymin = 0,
+                  ymax = Power*(100/600),
+                  group = Test),
+              fill = "grey", 
+              color = NA,
+              alpha = 0.2, 
+              size = 0.5) +
+  geom_point(size = .5) +
+  scale_y_continuous(limits = c(0,100), breaks = seq(0,100,20)) +
+  scale_x_continuous(limits = c(0,710), breaks = seq(0,720,90)) +
+  scale_color_manual(values = c("black","grey25","grey50", "grey75"),
+                     labels = c("Aug 23", "Nov 23","Mai 24","Oct 25")) +
+  theme(
+      legend.position = "inside",
+      legend.position.inside = c(.9,.9),
+      axis.text.y = element_blank(),
+      axis.ticks.y = element_blank()
+  )
+
+raw1 
+raw2 
+raw3
+```
+
+### Submaximal GXT
+
+The second test from November 2023 has been removed in @fig-SmO2kinetics to highlight the changes over a larger time period.
+
+```{r}
+#| label: fig-SmO2kinetics
+#| fig-cap: SmO~2~ profiles during GXT~submax~ over a period of 2 years with one test per year
+
+GXT_Data_clean |>
+  filter(Test != "23_11") |>
+  ggplot(aes(Time, SmO2, color = Test)) +
+  labs(
+    caption = "SmO~2~ data was smoothed using the {mnirs} package with a smoothed spline (spar = 0.05)",
+    x = "Time [seconds]",
+    y = "SmO~2~ [%]",
+    color = "Test Date"
+  ) +
+  geom_ribbon(data = GXT_Data_clean |> filter(Test == "25_10"),
+              aes(xmin = min(Time),
+                  xmax = max(Time),
+                  ymin = 0,
+                  ymax = Power*(100/350),
+                  group = Test),
+              fill = "grey", 
+              color = NA,
+              alpha = 0.2, 
+              size = 0.5) +
+  geom_point(size = 1) +
+  scale_y_continuous(limits = c(0,100), breaks = seq(0,100,20))
+```
+
+### Ramp Incremental Test
+
+Let's start with the plots of all timepoints
+
+```{r}
+#| label: fig-SmO2ramp
+#| fig-cap: SmO~2~ profiles during the ramp test over a period of 2 years with one test per year
+
+Ramp_Data_clean |>
+  filter(Test != "23_11") |>
+  ggplot(aes(Time-60, SmO2, color = Test)) +
+  labs(
+    caption = "SmO~2~ data was smoothed using the {mnirs} package with a smoothed spline (spar = 0.05)",
+    x = "Time [seconds]",
+    y = "SmO~2~ [%]",
+    color = "Test Date"
+  ) +
+  geom_ribbon(data = Ramp_Data_clean |> filter(Test == "25_10"),
+              aes(xmin = min(Time),
+                  xmax = max(Time),
+                  ymin = 0,
+                  ymax = Power*(100/600),
+                  group = Test),
+              fill = "grey", 
+              color = NA,
+              alpha = 0.2, 
+              size = 0.5) +
+  geom_point(size = 1) +
+  geom_vline(xintercept = 0, linetype = 2) +
+  geom_vline(xintercept = c(490,523,570), color = clrs[1:3],linetype = 2) +
+  scale_y_continuous(limits = c(0,100), breaks = seq(0,100,20)) +
+  scale_x_continuous(limits = c(-60,660), breaks = seq(-60,600,60))
+```
+
+### Lactate Minimum Test
+
+```{r}
+#| label: fig-SmO2LMT
+#| fig-cap: SmO~2~ profiles during the LMT over a period of 2 years with one test per year
+
+LMT_Data_clean |>
+  filter(Test != "23_11") |>
+  ggplot(aes(Time, SmO2, color = Test)) +
+  labs(
+    caption = "SmO~2~ data was smoothed using the {mnirs} package with a smoothed spline (spar = 0.05)",
+    x = "Time [seconds]",
+    y = "SmO~2~ [%]",
+    color = "Test Date"
+  ) +
+  geom_ribbon(data = LMT_Data_clean |> filter(Test == "25_10"),
+              aes(xmin = min(Time),
+                  xmax = max(Time),
+                  ymin = 0,
+                  ymax = Power*(100/400),
+                  group = Test),
+              fill = "grey", 
+              color = NA,
+              alpha = 0.2, 
+              size = 0.5) +
+  geom_point(size = 1) +
+  scale_y_continuous(limits = c(0,100), breaks = seq(0,100,20)) +
+  scale_x_continuous(limits = c(0,710), breaks = seq(0,720,90))
+```

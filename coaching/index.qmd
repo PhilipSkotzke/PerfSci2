@@ -1,9 +1,10 @@
 ---
 title: Coaching
+page-navigation: true
 comments: false
 ---
 
-![](banner.jpg){.img-fluid .rounded}
+![](banner2.jpg){.img-fluid .rounded}
 
 ### Ausdauertraining, das zu dir passt {.bg-light}
 
@@ -13,18 +14,27 @@ Egal ob Einsteiger, erfahrener Athlet oder Profi – ich bringe die Erfahrung un
 
 Du brinst deine eigenen Voraussetzungen mit - und ich übernehme die Trainingsplanung, begleite dich im 1:1 Coaching, führe mit dir eine Leistungsdiagnostik durch oder helfe dir, deine Kraul-Schwimmtechnik zu verbessern. So kannst du dein Training gezielt steuern und deine Ziele effizient erreichen.
 
+::: text-center
+[🎓 Jetzt Coaching Pakete entdecken](/coaching/index.qmd#pakete-und-leistungen){.link-box-acc}
+:::
+
 ::::: {.grid .bg-accent}
 ::: {.g-col-12 .g-col-md-6}
 ### Wissenschaft trifft auf Praxis
 
 Als Sportwissenschaftler weiß ich, wie effektives Training funktioniert und integriere kontinuierlich neue wissenschaftliche Erkenntisse in die Praxis. Ich arbeite strukturiert und zielorientiert, und passe das Training an deine individuellen Stärken und Schwächen an. Mit regelmäßigen Leistungskontrollen stellen wir sicher, dass du Fortschritte machst – und reagieren, wenn es einmal nicht nach Plan läuft.
 
-Gleichzeitig weiß ich aus meigener Erfahrung als Coach und Athlet: Das Leben hält sich nicht an Trainingspläne. Ob Stress im Alltag oder eine Erkältung - entscheidend ist, flexibel zu bleiben. Mit meiner mehrjährigen Praxiserfahrung helfe ich dir, das Training so zu gestalten, dass es zu deinem Leben passt - und du langfristig dranbleibst.
+Gleichzeitig weiß ich aus meiner Erfahrung als Coach und Athlet: Das Leben hält sich nicht an Trainingspläne. Ob Stress im Alltag oder eine Erkältung - entscheidend ist, flexibel zu bleiben. Mit meiner mehrjährigen Praxiserfahrung helfe ich dir, das Training so zu gestalten, dass es zu deinem Leben passt - und du langfristig dranbleibst.
+
+::: text-center
+[🎓 Jetzt Coaching Pakete entdecken](/coaching/index.qmd#pakete-und-leistungen){.link-box-acc}
+:::
 :::
 
 ::: {.g-col-12 .g-col-md-6}
 ![](labtest.jpg){.img-fluid .rounded}
 :::
+
 :::::
 
 ::::: {.grid .bg-light}
@@ -99,7 +109,7 @@ Was Athlet\*innen über die Zusammenarbeit sagen:
 
 :::::: carousel-item
 ::::: {.card-testimonial .mx-auto style="max-width: 500px;"}
-<p>"Ich habe mein Training endlich strukturiert und erreiche konstant Fortschritte. Absolut empfehlenswert!"</p>
+<p>"Mit dem angepassten Plan komme ich meinen Zielen näher – trotz vollem Alltag."</p>
 
 :::: testimonial-author
 <img src="Matti.jpg" alt="Matti Hoth" class="avatar"/>
@@ -213,7 +223,7 @@ Ob Training, Schlaf oder Erholung – in einem 30- oder 60-minütigen Gespräch 
 
 <i class="bi bi-patch-check fs-4 me-2"></i> Unbegrenzte Kommunikation über Trainingsplattform
 
-<i class="bi bi-patch-check fs-4 me-2"></i> Individuelle Trainingsanalyse und Fortschrittskontrolle
+<i class="bi bi-patch-check fs-4 me-2"></i> Maßgeschneiderte Lösung für Trainingsanalyse und Fortschrittskontrolle
 :::
 
 ::: {.g-col-12 .g-col-md-6 .g-col-lg-4 .card-package}
@@ -221,11 +231,13 @@ Ob Training, Schlaf oder Erholung – in einem 30- oder 60-minütigen Gespräch 
 
 **Preis auf Anfrage**
 
-<i class="bi bi-dash"></i> Schwimm-Coaching
-
 <i class="bi bi-dash"></i> Leistungsdiagnostik
 
+<i class="bi bi-dash"></i> Coaching für Profis
+
 <i class="bi bi-dash"></i> Bikefitting
+
+<i class="bi bi-dash"></i> Schwimm-Coaching
 
 <i class="bi bi-dash"></i> Individuelle Beratung
 :::
@@ -239,3 +251,99 @@ Dann lass uns gemeinsam herausfinden, wie ich dich am besten unterstützen kann.
 
 Buche ein **kostenloses Erstgespräch**, und wir besprechen deine Ziele, dein aktuelles Training und die nächsten Schritte.
 
+<form
+name="coaching-contact"
+method="POST"
+data-netlify="true"
+action="thank-you.html"
+netlify-honeypot="bot-field">
+
+<input type="hidden" name="form-name" value="coaching-contact">
+
+<p class="hidden">
+    <label>
+      Don’t fill this out if you’re human: <input name="bot-field" type="text" />
+    </label>
+  </p>
+  
+<p>
+<label>Dein Name</label>
+<input type="text" name="name" required>
+</p>
+
+<p>
+<label>E-Mail</label>
+<input type="email" id="email" name="email"
+placeholder="Bitte E-Mail richtig angeben">
+</p>
+
+<p>
+<label>Telefon / WhatsApp</label>
+<input type="tel" id="phone" name="phone"
+placeholder="Bitte Telefonnummer richtig angeben">
+</p>
+
+<p>
+<label>Bevorzugter Kontaktweg</label>
+
+<div class="contact-options">
+
+<label>
+<input type="checkbox" name="contact_method" value="email" class="contact-option">
+E-Mail
+</label>
+
+<label>
+<input type="checkbox" name="contact_method" value="whatsapp" class="contact-option">
+WhatsApp
+</label>
+
+<label>
+<input type="checkbox" name="contact_method" value="phone" class="contact-option">
+Telefon
+</label>
+
+</div>
+</p>
+
+<p>
+<label>Nachricht</label>
+<textarea
+name="message"
+rows="4"
+placeholder="Beschreibe dich und deine Ziele kurz"
+required></textarea>
+</p>
+
+<p>
+    <button type="submit">Anfrage senden</button>
+</p>
+
+</form>
+
+<script>
+
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+const options = document.querySelectorAll(".contact-option");
+
+function updateRequiredFields() {
+
+let emailChecked = false;
+let phoneChecked = false;
+
+options.forEach(opt => {
+  if(opt.checked && opt.value === "email") emailChecked = true;
+  if(opt.checked && (opt.value === "whatsapp" || opt.value === "phone")) phoneChecked = true;
+});
+
+email.required = emailChecked;
+phone.required = phoneChecked;
+
+}
+
+options.forEach(opt => {
+  opt.addEventListener("change", updateRequiredFields);
+});
+
+</script>
