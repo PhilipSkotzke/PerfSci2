@@ -2,7 +2,7 @@
 title: "Blog"
 subtitle: "Here I write about science and endurance sports"
 listing:
-  contents: "**/*/"
+  contents: "*.qmd"
   sort: "date desc"
   type: default
   categories: false

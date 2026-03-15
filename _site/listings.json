@@ -2,9 +2,7 @@
   {
     "listing": "/posts/index.html",
     "items": [
-      "/posts/case-study-nirs/index.html",
-      "/posts/scientific-training/index.html",
-      "/posts/second-post/index.html"
+      "/posts/scientific-training/index.html"
     ]
   }
 ]
