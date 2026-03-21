@@ -3,16 +3,19 @@ title: "*Performance Science^2^*"
 subtitle: | 
   **Philip Skotzke** \
   *Sport Sciencist & Researcher | Coach | Athlete*
-image: profile.jpg
+image: images/profile.jpg
 about: # https://quarto.org/docs/websites/website-about.html
   template: broadside
   links:
     - text: "{{< iconify mdi:linkedin size=xl >}} LinkedIn"
       href: https://linkedin.com/in/philip-skotzke/
+      target: _blank
     - text: "{{< iconify academicons:researchgate-square size=xl >}} ResearchGate"
       href: https://www.researchgate.net/profile/Philip-Skotzke
+      target: _blank
     - text: "{{< iconify fa6-brands:square-bluesky size=xl >}} Bluesky"
       href: https://bsky.app/profile/philipskotzke.bsky.social
+      target: _blank
 comments: false
 ---
 

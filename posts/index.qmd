@@ -1,6 +1,6 @@
 ---
 title: "Blog"
-subtitle: "Here I write about science and endurance sports"
+subtitle: "Where sport science meets coaching practice."
 listing:
   contents: "*.qmd"
   sort: "date desc"
@@ -8,6 +8,7 @@ listing:
   categories: false
   sort-ui: false
   filter-ui: true
+  fields: [image, date, author, title, reading-time, description]
 page-layout: full
 title-block-banner: false
 date-format: "DD.MM.YYYY"
@@ -15,6 +16,8 @@ toc: false
 comments: false
 ---
 
-As scientists we are focused on conducting our own research, creating new knowledge and presenting it to our peers. Here I am trying to take the next step for my own work: I aim to provide additional research insights and communicate scientific ideas to a broader audience.
+As scientists, we spend most of our time conducting research, generating new knowledge, and communicating it within academic circles. With this blog, I want to take a step further and open that process to a broader audience.
 
-Topics will range from research article discussions, opinion pieces and coaching thoughts.
+Here, I share insights from my own research, discuss ideas from sport science, and reflect on how scientific knowledge translates into real coaching practice. Some posts will explore research articles and concepts in more depth, others will be opinion pieces or thoughts from the coaching side of endurance sports.
+
+The goal is simple: to think more clearly about training, science, and how the two interact.

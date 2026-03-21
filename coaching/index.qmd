@@ -4,15 +4,16 @@ page-navigation: true
 comments: false
 ---
 
-![](banner2.jpg){.img-fluid .rounded}
+![](../images/banner.jpg){.img-fluid .rounded}
 
-### Ausdauertraining, das zu dir passt {.bg-light}
+### Individelles Coaching für Anfänger und ambitionierte Ausdauerathleten {.bg-light}
 
-Du hast ein sportliches Ziel und suchst professionelle Begleitung?
+Du hast sportliche Ziele und suchst strukturiertes, professionelles Coaching?
 
-Egal ob Einsteiger, erfahrener Athlet oder Profi – ich bringe die Erfahrung und das Know-how mit, um dich auf deinem Weg zu unterstützen und das Beste aus dir herauszuholen.
+Ich unterstütze dich dabei, **gezielter zu trainieren, schneller Fortschritte zu machen und dein Leistungsniveau nachhaltig zu steigern**, egal ob Anfänger oder ambitionierter Ausdauerathlet.
 
-Du brinst deine eigenen Voraussetzungen mit - und ich übernehme die Trainingsplanung, begleite dich im 1:1 Coaching, führe mit dir eine Leistungsdiagnostik durch oder helfe dir, deine Kraul-Schwimmtechnik zu verbessern. So kannst du dein Training gezielt steuern und deine Ziele effizient erreichen.
+Du bringst Motivation und Ziel mit – ich übernehme Planung, Analyse und Steuerung deines Trainings.
+Von individueller Trainingsplanung über Leistungsdiagnostik bis hin zu Technik-Coaching im Schwimmen.
 
 ::: text-center
 [🎓 Jetzt Coaching Pakete entdecken](/coaching/index.qmd#pakete-und-leistungen){.link-box-acc}
@@ -22,52 +23,24 @@ Du brinst deine eigenen Voraussetzungen mit - und ich übernehme die Trainingspl
 ::: {.g-col-12 .g-col-md-6}
 ### Wissenschaft trifft auf Praxis
 
-Als Sportwissenschaftler weiß ich, wie effektives Training funktioniert und integriere kontinuierlich neue wissenschaftliche Erkenntisse in die Praxis. Ich arbeite strukturiert und zielorientiert, und passe das Training an deine individuellen Stärken und Schwächen an. Mit regelmäßigen Leistungskontrollen stellen wir sicher, dass du Fortschritte machst – und reagieren, wenn es einmal nicht nach Plan läuft.
+Mein Coaching verbindet **aktuelle Sportwissenschaft mit echter Coaching-Erfahrung**.
 
-Gleichzeitig weiß ich aus meiner Erfahrung als Coach und Athlet: Das Leben hält sich nicht an Trainingspläne. Ob Stress im Alltag oder eine Erkältung - entscheidend ist, flexibel zu bleiben. Mit meiner mehrjährigen Praxiserfahrung helfe ich dir, das Training so zu gestalten, dass es zu deinem Leben passt - und du langfristig dranbleibst.
+Training wird strukturiert geplant, regelmäßig analysiert und anhand deiner Entwicklung angepasst.
+Leistungstests und Daten aus deinem Training helfen uns, Fortschritte sichtbar zu machen.
 
 ::: text-center
-[🎓 Jetzt Coaching Pakete entdecken](/coaching/index.qmd#pakete-und-leistungen){.link-box-acc}
+[Direkt zu den Angeboten ⬇️](/coaching/index.qmd#pakete-und-leistungen){.link-box-acc}
 :::
 :::
 
 ::: {.g-col-12 .g-col-md-6}
-![](labtest.jpg){.img-fluid .rounded}
+![](../images/labtest.jpg){.img-fluid .rounded width=70%}
 :::
 
 :::::
 
-::::: {.grid .bg-light}
-::: {.g-col-12 .g-col-md-6}
-![](coaching.jpg){.img-fluid .rounded}
-:::
-
-::: {.g-col-12 .g-col-md-6}
-### Individualität im Fokus: Es ist dein Weg
-
-Ich arbeite ausschließlich im 1:1 Coaching – dein Training ist also immer individuell auf dich abgestimmt. Gemeinsam planen wir jede Einheit so, dass sie zu deinem Alltag und deinen Zielen passt. Wenn sich etwas ändert – ein spontaner Termin auf der Arbeit oder eine Erkältung – passen wir dein Training flexibel an, damit du kontinuierlich dranbleiben kannst.
-
-Über eine digitale Trainingsplattform ([intervals.icu](https://intervals.icu)) erhälst du präzise Vorgaben zu Pace, Watt oder Herzfrequenz. Deine Sportuhr synchronisiert automatisch, sodass ich jede Einheit analysieren und gezieltes Feedback geben kann – für dein bestes Training, jederzeit.
-:::
-:::::
-
-::: text-center
-[Erfahre mehr über meine Philosophie](/about%20me/index.qmd){.link-box}
-:::
-
-### Was du mit meinem Coaching erreichst: {.bg-gray}
-
-<i class="bi bi-calendar3-week fs-4 me-2"></i> **Mehr Struktur & Effizienz** - du trainierst gezielt statt zufällig
-
-<i class="bi bi-heart-pulse fs-4 me-2"></i> **Ganzheitliche Ansatz** - Training, Regeneration & Alltag im Einklang
-
-<i class="bi bi-people fs-4 me-2"></i> **Motivation & Unterstüztung** - ich bin an deiner Seite, auch wenn's mal schwerfällt
-
-<i class="bi bi-graph-up fs-4 me-2"></i> **Wissenschaftlich fundierte Steuerung** -jedes Training hat einen klaren Zweck
-
-<i class="bi bi-person-bounding-box fs-4 me-2"></i> **Individuelle Betreuung** - dein Training passt sich deinem Leben an, nicht umgekehrt
-
-### Stimmen aus dem Coaching {.bg-highlight}
+::: {.bg-highlight}
+### Stimmen aus dem Coaching 
 
 Was Athlet\*innen über die Zusammenarbeit sagen:
 
@@ -96,7 +69,7 @@ Was Athlet\*innen über die Zusammenarbeit sagen:
 <p>"Vom Amateur in die Rad-Bundesliga - dank Wissenschafts-basiertem Training!"</p>
 
 :::: testimonial-author
-<img src="Laurenz.jpg" alt="Laurenz Fery" class="avatar"/>
+<img src="../images/Laurenz.jpg" alt="Laurenz Fery" class="avatar"/>
 
 <div>
 
@@ -112,7 +85,7 @@ Was Athlet\*innen über die Zusammenarbeit sagen:
 <p>"Mit dem angepassten Plan komme ich meinen Zielen näher – trotz vollem Alltag."</p>
 
 :::: testimonial-author
-<img src="Matti.jpg" alt="Matti Hoth" class="avatar"/>
+<img src="../images/Matti.jpg" alt="Matti Hoth" class="avatar"/>
 
 <div>
 
@@ -128,7 +101,7 @@ Was Athlet\*innen über die Zusammenarbeit sagen:
 <p>"Super Trainingsplan, top Coach – hat mich sicher und motiviert zu meinem Marathonziel gebracht."</p>
 
 :::: testimonial-author
-<img src="Maxi.jpg" alt="Maximilian Heinrich" class="avatar"/>
+<img src="../images/Maxi.jpg" alt="Maximilian Heinrich" class="avatar"/>
 
 <div>
 
@@ -144,7 +117,7 @@ Was Athlet\*innen über die Zusammenarbeit sagen:
 <p>„Ich konnte gar nicht schwimmen – dank Philip beherrsche ich jetzt alle vier Lagen mit sauberer Technik und gutem Wassergefühl.“</p>
 
 :::: testimonial-author
-<img src="Aladdin.jpg" alt="Aladdin Gomaa" class="avatar"/>
+<img src="../images/Aladdin.jpg" alt="Aladdin Gomaa" class="avatar"/>
 
 <div>
 
@@ -160,6 +133,43 @@ Was Athlet\*innen über die Zusammenarbeit sagen:
 
 <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next"> </a>
 :::::::::::::::::::::
+
+::: text-center
+[Kostenloses Erstgespräch vereinbaren](/coaching/index.qmd#kontaktiere-mich){.link-box}
+:::
+:::
+
+::::: {.grid .bg-light}
+::: {.g-col-12 .g-col-md-6}
+![](../images/coaching.jpg){.img-fluid .rounded  width=70%}
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Individualität im Fokus: Es ist dein Weg
+
+Ich arbeite ausschließlich im 1:1 Coaching – dein Training ist also immer individuell auf dich abgestimmt. Gemeinsam planen wir jede Einheit so, dass sie zu deinem Alltag und deinen Zielen passt. Wenn sich etwas ändert – ein spontaner Termin auf der Arbeit oder eine Erkältung – passen wir dein Training flexibel an, damit du kontinuierlich dranbleiben kannst.
+
+Über eine digitale Trainingsplattform ([intervals.icu](https://intervals.icu)) erhälst du präzise Vorgaben zu Pace, Watt oder Herzfrequenz.
+Ich analysiere jede Einheit und gebe dir gezieltes Feedback – damit dein Training wirklich wirkt.
+
+::: text-center
+[Erfahre mehr über meine Philosophie](/about%20me/index.qmd){.link-box}
+:::
+
+:::
+:::::
+
+### Was du mit meinem Coaching erreichst: {.bg-gray}
+
+<i class="bi bi-calendar3-week fs-4 me-2"></i> **Mehr Struktur & Effizienz** - du trainierst gezielt statt zufällig
+
+<i class="bi bi-heart-pulse fs-4 me-2"></i> **Ganzheitliche Ansatz** - Training, Regeneration & Alltag im Einklang
+
+<i class="bi bi-people fs-4 me-2"></i> **Motivation & Unterstüztung** - ich bin an deiner Seite, auch wenn's mal schwerfällt
+
+<i class="bi bi-graph-up fs-4 me-2"></i> **Wissenschaftlich fundierte Steuerung** -jedes Training hat einen klaren Zweck
+
+<i class="bi bi-person-bounding-box fs-4 me-2"></i> **Individuelle Betreuung** - dein Training passt sich deinem Leben an, nicht umgekehrt
 
 ## Leistungen {.bg-light}
 
@@ -255,7 +265,7 @@ Buche ein **kostenloses Erstgespräch**, und wir besprechen deine Ziele, dein ak
 name="coaching-contact"
 method="POST"
 data-netlify="true"
-action="thank-you.html"
+action="../thank-you.html"
 netlify-honeypot="bot-field">
 
 <input type="hidden" name="form-name" value="coaching-contact">
@@ -311,7 +321,7 @@ Telefon
 <textarea
 name="message"
 rows="4"
-placeholder="Beschreibe dich und deine Ziele kurz"
+placeholder="Beschreibe kurz mir, wie ich dir helfen kann"
 required></textarea>
 </p>
 

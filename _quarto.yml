@@ -2,8 +2,9 @@ project:
   type: website
 
 website:
-  title: "PS^2^"
-  description: "Das ist die persönliche Webseite von Philip Skotzke."
+  title: "PS²"
+  description: "Personal Website of Philip Skotzke, Performance Science Squared"
+  image: /images/logo.png
   open-graph: true # https://quarto.org/docs/websites/website-tools.html#open-graph
   page-footer: 
     left: |

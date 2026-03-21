@@ -1,6 +1,13 @@
 ---
 title: Danke!
+comments: false
 ---
 
 Vielen Dank für deine Nachricht!  
 Ich melde mich bald bei dir.
+
+::: text-center
+[Zurück zum Coaching](/coaching/index.qmd){.link-box}
+:::
+
+![](images/banner_thank_you.jpg){.img-fluid .rounded}

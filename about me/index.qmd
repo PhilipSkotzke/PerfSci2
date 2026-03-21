@@ -15,7 +15,7 @@ In meiner **Forschung** als Sportwissenschaftler beschäfitge ich mich mit Ermü
 :::
 
 ::: {class="g-col-12 g-col-md-6"}
-![](img_01.jpg){.img-fluid .rounded}
+![](../images/img_01.jpg){.img-fluid .rounded}
 :::
 
 :::
@@ -28,7 +28,7 @@ Diese Vielfalt prägt meine Arbeit - und genau das gebe ich im Coaching weiter.
 ::: {.grid}
 
 ::: {class="g-col-12 g-col-md-6"}
-![](img_02.jpg){.img-fluid .rounded}
+![](../images/img_02.jpg){.img-fluid .rounded}
 :::
 
 ::: {class="g-col-12 g-col-md-6"}
@@ -54,7 +54,7 @@ Meine Arbeit fokussiert sich darauf, neue Methoden in Diagnostik, Trainingssteue
 :::
 
 ::: {class="g-col-12 g-col-md-6"}
-![](img_03.jpg){.img-fluid .rounded}
+![](../images/img_03.jpg){.img-fluid .rounded}
 :::
 :::
 
@@ -71,67 +71,67 @@ Meine Arbeit fokussiert sich darauf, neue Methoden in Diagnostik, Trainingssteue
 ::: {.grid}
 
 ::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
-![](img_04.jpg){.img-fluid .rounded .hover-zoom}
+![](../images/img_04.jpg){.img-fluid .rounded .hover-zoom}
 :::
 
 ::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
-![](img_05.jpg){.img-fluid .rounded .hover-zoom}
+![](../images/img_05.jpg){.img-fluid .rounded .hover-zoom}
 :::
 
 ::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
-![](img_12.jpg){.img-fluid .rounded .hover-zoom}
+![](../images/img_12.jpg){.img-fluid .rounded .hover-zoom}
 :::
 
 ::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
-![](img_07.jpg){.img-fluid .rounded .hover-zoom}
+![](../images/img_07.jpg){.img-fluid .rounded .hover-zoom}
 :::
 
 ::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
-![](img_08.jpg){.img-fluid .rounded .hover-zoom}
+![](../images/img_08.jpg){.img-fluid .rounded .hover-zoom}
 :::
 
 ::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
-![](img_09.jpg){.img-fluid .rounded .hover-zoom}
+![](../images/img_09.jpg){.img-fluid .rounded .hover-zoom}
 :::
 
 ::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
-![](img_10.jpg){.img-fluid .rounded .hover-zoom}
+![](../images/img_10.jpg){.img-fluid .rounded .hover-zoom}
 :::
 
 ::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
-![](img_11.jpg){.img-fluid .rounded .hover-zoom}
+![](../images/img_11.jpg){.img-fluid .rounded .hover-zoom}
 :::
 
 ::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
-![](img_06.jpg){.img-fluid .rounded .hover-zoom}
+![](../images/img_06.jpg){.img-fluid .rounded .hover-zoom}
 :::
 
 ::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
-![](img_16.jpg){.img-fluid .rounded .hover-zoom}
+![](../images/img_16.jpg){.img-fluid .rounded .hover-zoom}
 :::
 
 ::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
-![](img_14.jpg){.img-fluid .rounded .hover-zoom}
+![](../images/img_14.jpg){.img-fluid .rounded .hover-zoom}
 :::
 
 ::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
-![](img_15.jpg){.img-fluid .rounded .hover-zoom}
+![](../images/img_15.jpg){.img-fluid .rounded .hover-zoom}
 :::
 
 ::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
-![](img_13.jpg){.img-fluid .rounded .hover-zoom}
+![](../images/img_13.jpg){.img-fluid .rounded .hover-zoom}
 :::
 
 ::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
-![](img_17.jpg){.img-fluid .rounded .hover-zoom}
+![](../images/img_17.jpg){.img-fluid .rounded .hover-zoom}
 :::
 
 ::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
-![](img_18.jpg){.img-fluid .rounded .hover-zoom}
+![](../images/img_18.jpg){.img-fluid .rounded .hover-zoom}
 :::
 
 ::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
-![](img_19.jpg){.img-fluid .rounded .hover-zoom}
+![](../images/img_19.jpg){.img-fluid .rounded .hover-zoom}
 :::
 
 :::
