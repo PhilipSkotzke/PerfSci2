@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Coaching – PS2</title>
+<title>Coaching – PS²</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -37,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-2a12b63f0fb176c9b206a32fe913f9df.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-4c29405cabfbb95df166d851102d2528.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -73,10 +73,10 @@ cookieconsent.run({
   
 
 
-<meta property="og:title" content="Coaching – PS2">
-<meta property="og:description" content="Das ist die persönliche Webseite von Philip Skotzke.">
-<meta property="og:image" content="../images/banner.jpg">
-<meta property="og:site_name" content="PS<sup>2</sup>">
+<meta property="og:title" content="Coaching – PS²">
+<meta property="og:description" content="Personal Website of Philip Skotzke, Performance Science Squared">
+<meta property="og:image" content="../images/flag_de.svg">
+<meta property="og:site_name" content="PS²">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -87,7 +87,7 @@ cookieconsent.run({
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">PS<sup>2</sup></span>
+    <span class="navbar-title">PS²</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -144,9 +144,36 @@ cookieconsent.run({
 </header>
 
 
+<ul id="choose-your-tool" class="nav nav-tabs mb-4" role="tablist">
+<li class="nav-item" role="presentation">
+<a class="nav-link" href="index.html"> <img src="../images/flag_de.svg" width="24"> Deutsch </a>
+</li>
+<li class="nav-item" role="presentation">
+<a class="nav-link" href="en.html"> <img src="../images/flag_en.svg" width="24"> English </a>
+</li>
+</ul>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+  // get file name
+  const filename = window.location.pathname.split("/").slice(-1)[0];
+  
+  // latch active
+  const toolLinks = window.document.querySelectorAll("#choose-your-tool a");
+  for (const tool of toolLinks) {
+    if (tool.href.endsWith(filename)) {
+      tool.classList.add("active");
+      break;
+    }
+  }
+  
+   // save in local storage
+  window.localStorage.setItem("tutorialToolGetStarted", filename);
+});
+
+</script>
 <p><img src="../images/banner.jpg" class="img-fluid rounded"></p>
-<section id="individelles-coaching-für-anfänger-und-ambitionierte-ausdauerathleten" class="level3 bg-light">
-<h3 class="bg-light anchored" data-anchor-id="individelles-coaching-für-anfänger-und-ambitionierte-ausdauerathleten">Individelles Coaching für Anfänger und ambitionierte Ausdauerathleten</h3>
+<section id="individelles-coaching-für-ausdauersportler" class="level3 bg-light">
+<h3 class="bg-light anchored" data-anchor-id="individelles-coaching-für-ausdauersportler">Individelles Coaching für Ausdauersportler</h3>
 <p>Du hast sportliche Ziele und suchst strukturiertes, professionelles Coaching?</p>
 <p>Ich unterstütze dich dabei, <strong>gezielter zu trainieren, schneller Fortschritte zu machen und dein Leistungsniveau nachhaltig zu steigern</strong>, egal ob Anfänger oder ambitionierter Ausdauerathlet.</p>
 <p>Du bringst Motivation und Ziel mit – ich übernehme Planung, Analyse und Steuerung deines Trainings. Von individueller Trainingsplanung über Leistungsdiagnostik bis hin zu Technik-Coaching im Schwimmen.</p>
@@ -329,13 +356,13 @@ cookieconsent.run({
 <label> Don’t fill this out if you’re human: <input name="bot-field" type="text"> </label>
 </p>
 <p>
-<label>Dein Name</label> <input type="text" name="name" required="">
+<label>Dein Name</label> <input type="text" name="name" required="" placeholder="Bitte gib deinen Namen ein">
 </p>
 <p>
-<label>E-Mail</label> <input type="email" id="email" name="email" placeholder="Bitte E-Mail richtig angeben">
+<label>E-Mail</label> <input type="email" id="email" name="email" placeholder="Bitte E-Mail korrekt angeben">
 </p>
 <p>
-<label>Telefon / WhatsApp</label> <input type="tel" id="phone" name="phone" placeholder="Bitte Telefonnummer richtig angeben">
+<label>Telefon / WhatsApp</label> <input type="tel" id="phone" name="phone" placeholder="Bitte Telefonnummer korrekt angeben">
 </p>
 <p>
 </p><p><label>Bevorzugter Kontaktweg</label></p>
@@ -347,7 +374,7 @@ cookieconsent.run({
 <p></p>
 <p>
 <label>Nachricht</label>
-<textarea name="message" rows="4" placeholder="Beschreibe kurz mir, wie ich dir helfen kann" required=""></textarea>
+<textarea name="message" rows="4" placeholder="Beschreibe kurz deine Ziele und wie ich dir helfen kann" required=""></textarea>
 </p>
 <p>
 <button type="submit">
@@ -386,6 +413,125 @@ options.forEach(opt => {
 </section>
 
 </main> <!-- /main -->
+<div id="reading-progress-bar"></div>
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+
+  // Only run on blog posts stored in /posts/
+
+  const isPost = window.location.pathname.includes("/posts/");
+
+  if (!isPost) return;
+
+
+
+  const bar = document.getElementById("reading-progress-bar");
+
+
+
+  const titleBlock = document.querySelector(".quarto-title-block");
+
+
+
+  let startOffset = 0;
+
+
+
+  if (titleBlock) {
+
+    const rect = titleBlock.getBoundingClientRect();
+
+    startOffset = rect.top + window.scrollY + titleBlock.offsetHeight;
+
+  }
+
+
+
+  bar.classList.add("active");
+
+
+
+  let ticking = false;
+
+
+
+  function updateProgress() {
+
+    const scrollTop = window.scrollY;
+
+
+
+    const totalHeight =
+
+      document.documentElement.scrollHeight - window.innerHeight - startOffset;
+
+
+
+    const progress = Math.max(
+
+      0,
+
+      Math.min(100, ((scrollTop - startOffset) / totalHeight) * 100)
+
+    );
+
+
+
+    bar.style.width = progress + "%";
+
+
+
+    if (scrollTop > startOffset + 40) {
+
+      bar.classList.add("visible");
+
+    } else {
+
+      bar.classList.remove("visible");
+
+    }
+
+
+
+    ticking = false;
+
+  }
+
+
+
+  window.addEventListener(
+
+    "scroll",
+
+    function () {
+
+      if (!ticking) {
+
+        requestAnimationFrame(updateProgress);
+
+        ticking = true;
+
+      }
+
+    },
+
+    { passive: true }
+
+  );
+
+
+
+  updateProgress();
+
+});
+
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

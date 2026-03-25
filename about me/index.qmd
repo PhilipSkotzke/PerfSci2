@@ -3,6 +3,7 @@ title: "Über mich"
 comments: false
 ---
 
+{{< include ../_language_chooser.md >}}
 
 ::: {.grid}
 

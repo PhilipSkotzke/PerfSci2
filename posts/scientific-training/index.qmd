@@ -10,7 +10,7 @@ draft: false # don't render post
 categories: [coaching]
 ---
 
-![](blog_scienctific_training_pic1.png){.img-fluid .rounded}
+![Yes, this is an AI-generated figure. At the moment I am undecided if it adds value to the blog or not.](blog_scienctific_training_pic1.png){.img-fluid .rounded}
 
 Hi, this is Philip on Performance Science^2^. In my first blog post I will dive into the idea of **scientific training** - and why the term is misperceived and exploited.
 
@@ -29,7 +29,7 @@ Before we can answer this question, we need to understand what science is.
 You may be surprised to read that even scientists don't agree on a clear definition of science. Aspects found in many definitions are:
 
 -   Science is a system, structured in organizations following common practices
--   Science aims to generate generalizable knowledge
+-   Science aims to generate generalizable^[Note: In some scientific discplines, especially in the social sciences, generalizability is not necessarily the goal] knowledge
 -   Science tests hypotheses generated from prior knowledge
 -   Science uses specialized methods
 

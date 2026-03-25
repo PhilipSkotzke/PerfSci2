@@ -306,3 +306,93 @@ form {
 }
 
 }
+
+/* =========================================
+   Reading Progress Bar (fixed at top)
+   ========================================= */
+
+#reading-progress-bar {
+  position: fixed;
+  top: 0;             /* Always at the top of the viewport */
+  left: 0;
+  width: 0%;
+  height: 4px;
+  opacity: 0;
+  z-index: 9999;
+
+  /* Theme-based gradient for polish */
+  background: linear-gradient(
+    90deg,
+    $theme-c1,
+    color-mix(in srgb, $theme-c1, white 35%),
+    $theme-c1
+  );
+  background-size: 200% 100%;
+
+  /* Rounded edges */
+  border-radius: 0 4px 4px 0;
+
+  /* Smooth animation */
+  transition:
+    width 0.12s linear,
+    opacity 0.35s ease,
+    transform 0.25s ease;
+
+  transform-origin: left center;
+
+  pointer-events: none;
+
+  /* Subtle glow */
+  box-shadow:
+    0 0 6px rgba(0, 0, 0, 0.12),
+    0 0 14px color-mix(in srgb, $theme-c1, transparent 65%);
+}
+
+/* Appears when scrolling starts */
+#reading-progress-bar.active {
+  height: 4px;
+  transform: scaleY(0.85);
+}
+
+#reading-progress-bar.visible {
+  opacity: 1;
+  transform: scaleY(1);
+
+  /* Shimmer animation for a modern look */
+  animation: progress-shimmer 12s linear infinite;
+}
+
+/* Gradient motion animation */
+@keyframes progress-shimmer {
+  from {
+    background-position: 0% 0;
+  }
+  to {
+    background-position: 200% 0;
+  }
+}
+
+/* Desktop adjustments */
+@media (min-width: 900px) {
+  #reading-progress-bar.active {
+    height: 5px;
+    border-radius: 0 5px 5px 0;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  #reading-progress-bar.active {
+    height: 3px;
+    border-radius: 0 3px 3px 0;
+  }
+}
+
+/* High-DPI / Retina screens for smoother glow */
+@media (min-resolution: 2dppx) {
+  #reading-progress-bar {
+    box-shadow:
+      0 0 5px rgba(0, 0, 0, 0.10),
+      0 0 12px color-mix(in srgb, $theme-c1, transparent 70%);
+  }
+}

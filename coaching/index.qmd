@@ -3,10 +3,11 @@ title: Coaching
 page-navigation: true
 comments: false
 ---
+{{< include ../_language_chooser.md >}}
 
 ![](../images/banner.jpg){.img-fluid .rounded}
 
-### Individelles Coaching für Anfänger und ambitionierte Ausdauerathleten {.bg-light}
+### Individelles Coaching für Ausdauersportler {.bg-light}
 
 Du hast sportliche Ziele und suchst strukturiertes, professionelles Coaching?
 
@@ -278,19 +279,20 @@ netlify-honeypot="bot-field">
   
 <p>
 <label>Dein Name</label>
-<input type="text" name="name" required>
+<input type="text" name="name" required
+placeholder="Bitte gib deinen Namen ein">
 </p>
 
 <p>
 <label>E-Mail</label>
 <input type="email" id="email" name="email"
-placeholder="Bitte E-Mail richtig angeben">
+placeholder="Bitte E-Mail korrekt angeben">
 </p>
 
 <p>
 <label>Telefon / WhatsApp</label>
 <input type="tel" id="phone" name="phone"
-placeholder="Bitte Telefonnummer richtig angeben">
+placeholder="Bitte Telefonnummer korrekt angeben">
 </p>
 
 <p>
@@ -321,7 +323,7 @@ Telefon
 <textarea
 name="message"
 rows="4"
-placeholder="Beschreibe kurz mir, wie ich dir helfen kann"
+placeholder="Beschreibe kurz deine Ziele und wie ich dir helfen kann"
 required></textarea>
 </p>
 

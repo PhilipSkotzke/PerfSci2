@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Performance Science2 – PS&lt;sup&gt;2&lt;/sup&gt;</title>
+<title>Performance Science2 – PS²</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -36,7 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2a12b63f0fb176c9b206a32fe913f9df.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-4c29405cabfbb95df166d851102d2528.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "language": {
@@ -73,11 +73,11 @@ cookieconsent.run({
   
 
 
-<meta property="og:title" content="Performance Science2 – PS2">
+<meta property="og:title" content="Performance Science2 – PS²">
 <meta property="og:description" content="Philip Skotzke
 Sport Sciencist &amp; Researcher | Coach | Athlete">
 <meta property="og:image" content="images/profile.jpg">
-<meta property="og:site_name" content="PS<sup>2</sup>">
+<meta property="og:site_name" content="PS²">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -88,7 +88,7 @@ Sport Sciencist &amp; Researcher | Coach | Athlete">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">PS<sup>2</sup></span>
+    <span class="navbar-title">PS²</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -138,10 +138,10 @@ Sport Sciencist &amp; Researcher | Coach | Athlete">
 </header><main class="content" id="quarto-document-content">
 <ul id="choose-your-tool" class="nav nav-tabs mb-4" role="tablist">
 <li class="nav-item" role="presentation">
-<a class="nav-link" href="index.html"> <img src="images/flag_de.svg" width="24"> Deutsch </a>
+<a class="nav-link" href="index.html"> <img src="./images/flag_de.svg" width="24"> Deutsch </a>
 </li>
 <li class="nav-item" role="presentation">
-<a class="nav-link" href="en.html"> <img src="images/flag_en.svg" width="24"> English </a>
+<a class="nav-link" href="en.html"> <img src="./images/flag_en.svg" width="24"> English </a>
 </li>
 </ul>
 <script type="text/javascript">
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <h2 data-anchor-id="blog">Blog</h2>
 <p>The blog is the heart of my website. Here, I share medium-to-long format insights into scientific topics, training advice and much more.</p>
 <div class="text-center">
-<p><a href="./posts/index.html" class="link-box">Go to the blog</a></p>
+<p><a href="./posts/index.html" class="link-box">Go to the blog <img src="./images/flag_en.svg" width="24"></a></p>
 </div>
 </section>
 <section id="coaching" class="level2">
@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <p>No matter what goal you’re pursuing - I create <strong>tailored training plans</strong> and provide individual support to help you achieve it.</p>
 <p>Whether it’s your first triathlon, a marathon personal best, or the famous “Ötztaler Radmarathon” - I’ll support you every step of the way.</p>
 <div class="text-center">
-<p><a href="./coaching/index.html" class="link-box-acc">Learn more <img src="images/flag_de.svg" width="24"></a></p>
+<p><a href="./coaching/en.html" class="link-box-acc">Learn about my coaching <img src="./images/flag_en.svg" width="24"></a></p>
 </div>
 </section>
 <section id="about-me" class="level2">
@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </ul>
 <p>Read about my motivation, my philosophy, and my passion for sport.</p>
 <div class="text-center">
-<p><a href="./about me/index.html" class="link-box">Get to know me <img src="images/flag_de.svg" width="24"></a></p>
+<p><a href="./about me/en.html" class="link-box">Get to know me <img src="images/flag_en.svg" width="24"></a></p>
 </div>
 
 
@@ -209,6 +209,125 @@ document.addEventListener("DOMContentLoaded", function() {
 </div>
 </div>
  <!-- /main -->
+<div id="reading-progress-bar"></div>
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+
+  // Only run on blog posts stored in /posts/
+
+  const isPost = window.location.pathname.includes("/posts/");
+
+  if (!isPost) return;
+
+
+
+  const bar = document.getElementById("reading-progress-bar");
+
+
+
+  const titleBlock = document.querySelector(".quarto-title-block");
+
+
+
+  let startOffset = 0;
+
+
+
+  if (titleBlock) {
+
+    const rect = titleBlock.getBoundingClientRect();
+
+    startOffset = rect.top + window.scrollY + titleBlock.offsetHeight;
+
+  }
+
+
+
+  bar.classList.add("active");
+
+
+
+  let ticking = false;
+
+
+
+  function updateProgress() {
+
+    const scrollTop = window.scrollY;
+
+
+
+    const totalHeight =
+
+      document.documentElement.scrollHeight - window.innerHeight - startOffset;
+
+
+
+    const progress = Math.max(
+
+      0,
+
+      Math.min(100, ((scrollTop - startOffset) / totalHeight) * 100)
+
+    );
+
+
+
+    bar.style.width = progress + "%";
+
+
+
+    if (scrollTop > startOffset + 40) {
+
+      bar.classList.add("visible");
+
+    } else {
+
+      bar.classList.remove("visible");
+
+    }
+
+
+
+    ticking = false;
+
+  }
+
+
+
+  window.addEventListener(
+
+    "scroll",
+
+    function () {
+
+      if (!ticking) {
+
+        requestAnimationFrame(updateProgress);
+
+        ticking = true;
+
+      }
+
+    },
+
+    { passive: true }
+
+  );
+
+
+
+  updateProgress();
+
+});
+
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const isCodeAnnotation = (el) => {

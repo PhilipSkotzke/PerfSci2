@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Über mich – PS2</title>
+<title>Über mich – PS²</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -37,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-2a12b63f0fb176c9b206a32fe913f9df.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-4c29405cabfbb95df166d851102d2528.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -73,10 +73,10 @@ cookieconsent.run({
   
 
 
-<meta property="og:title" content="Über mich – PS2">
-<meta property="og:description" content="Das ist die persönliche Webseite von Philip Skotzke.">
-<meta property="og:image" content="../images/img_01.jpg">
-<meta property="og:site_name" content="PS<sup>2</sup>">
+<meta property="og:title" content="PS²">
+<meta property="og:description" content="Philip Skotzke - Performance Science²">
+<meta property="og:image" content="/images/logo.png">
+<meta property="og:site_name" content="PS²">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -87,7 +87,7 @@ cookieconsent.run({
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">PS<sup>2</sup></span>
+    <span class="navbar-title">PS²</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -144,6 +144,33 @@ cookieconsent.run({
 </header>
 
 
+<ul id="choose-your-tool" class="nav nav-tabs mb-4" role="tablist">
+<li class="nav-item" role="presentation">
+<a class="nav-link" href="index.html"> <img src="../images/flag_de.svg" width="24"> Deutsch </a>
+</li>
+<li class="nav-item" role="presentation">
+<a class="nav-link" href="en.html"> <img src="../images/flag_en.svg" width="24"> English </a>
+</li>
+</ul>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+  // get file name
+  const filename = window.location.pathname.split("/").slice(-1)[0];
+  
+  // latch active
+  const toolLinks = window.document.querySelectorAll("#choose-your-tool a");
+  for (const tool of toolLinks) {
+    if (tool.href.endsWith(filename)) {
+      tool.classList.add("active");
+      break;
+    }
+  }
+  
+   // save in local storage
+  window.localStorage.setItem("tutorialToolGetStarted", filename);
+});
+
+</script>
 <div class="grid">
 <div class="g-col-12 g-col-md-6">
 <p>Ich bin <strong>Philip</strong>, Coach, Sportwissenschaftler und jemand, der Sport wirklich lebt. Ob beim <strong>Triathlontraining</strong>, auf einer <strong>Bikepacking-Tour</strong> durch die Berge oder beim <strong>Wildwasser-Kajakfahren</strong> - Bewegung ist nicht nur ein Hobby, sondern ein zentraler Teil meines Lebens.</p>
@@ -242,6 +269,125 @@ cookieconsent.run({
 </section>
 
 </main> <!-- /main -->
+<div id="reading-progress-bar"></div>
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+
+  // Only run on blog posts stored in /posts/
+
+  const isPost = window.location.pathname.includes("/posts/");
+
+  if (!isPost) return;
+
+
+
+  const bar = document.getElementById("reading-progress-bar");
+
+
+
+  const titleBlock = document.querySelector(".quarto-title-block");
+
+
+
+  let startOffset = 0;
+
+
+
+  if (titleBlock) {
+
+    const rect = titleBlock.getBoundingClientRect();
+
+    startOffset = rect.top + window.scrollY + titleBlock.offsetHeight;
+
+  }
+
+
+
+  bar.classList.add("active");
+
+
+
+  let ticking = false;
+
+
+
+  function updateProgress() {
+
+    const scrollTop = window.scrollY;
+
+
+
+    const totalHeight =
+
+      document.documentElement.scrollHeight - window.innerHeight - startOffset;
+
+
+
+    const progress = Math.max(
+
+      0,
+
+      Math.min(100, ((scrollTop - startOffset) / totalHeight) * 100)
+
+    );
+
+
+
+    bar.style.width = progress + "%";
+
+
+
+    if (scrollTop > startOffset + 40) {
+
+      bar.classList.add("visible");
+
+    } else {
+
+      bar.classList.remove("visible");
+
+    }
+
+
+
+    ticking = false;
+
+  }
+
+
+
+  window.addEventListener(
+
+    "scroll",
+
+    function () {
+
+      if (!ticking) {
+
+        requestAnimationFrame(updateProgress);
+
+        ticking = true;
+
+      }
+
+    },
+
+    { passive: true }
+
+  );
+
+
+
+  updateProgress();
+
+});
+
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -29,7 +29,7 @@ Hi! I am **Philip** - sport scientist, coach and passionate athlete.
 The blog is the heart of my website. Here, I share medium-to-long format insights into scientific topics, training advice and much more.
 
 ::: text-center
-[Go to the blog](posts/index.qmd){.link-box}
+[Go to the blog <img src="/images/flag_en.svg" width="24">](posts/index.qmd){.link-box}
 :::
 
 ## Coaching
@@ -39,7 +39,7 @@ No matter what goal you’re pursuing - I create **tailored training plans** and
 Whether it’s your first triathlon, a marathon personal best, or the famous "Ötztaler Radmarathon" - I’ll support you every step of the way.
 
 ::: text-center
-[Learn more <img src="images/flag_de.svg" width="24">](coaching/index.qmd){.link-box-acc}
+[Learn about my coaching <img src="/images/flag_en.svg" width="24">](coaching/en.qmd){.link-box-acc}
 :::
 
 ## About me
@@ -54,7 +54,7 @@ Passion meets expertise. I combine **hands-on coaching experience** with scienti
 Read about my motivation, my philosophy, and my passion for sport.
 
 ::: text-center
-[Get to know me <img src="images/flag_de.svg" width="24">](about%20me/index.qmd){.link-box}
+[Get to know me <img src="images/flag_en.svg" width="24">](about%20me/en.qmd){.link-box}
 :::
 
 

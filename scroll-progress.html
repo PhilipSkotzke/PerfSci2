@@ -1,0 +1,60 @@
+<div id="reading-progress-bar"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Only run on blog posts stored in /posts/
+  const isPost = window.location.pathname.includes("/posts/");
+  if (!isPost) return;
+
+  const bar = document.getElementById("reading-progress-bar");
+
+  const titleBlock = document.querySelector(".quarto-title-block");
+
+  let startOffset = 0;
+
+  if (titleBlock) {
+    const rect = titleBlock.getBoundingClientRect();
+    startOffset = rect.top + window.scrollY + titleBlock.offsetHeight;
+  }
+
+  bar.classList.add("active");
+
+  let ticking = false;
+
+  function updateProgress() {
+    const scrollTop = window.scrollY;
+
+    const totalHeight =
+      document.documentElement.scrollHeight - window.innerHeight - startOffset;
+
+    const progress = Math.max(
+      0,
+      Math.min(100, ((scrollTop - startOffset) / totalHeight) * 100)
+    );
+
+    bar.style.width = progress + "%";
+
+    if (scrollTop > startOffset + 40) {
+      bar.classList.add("visible");
+    } else {
+      bar.classList.remove("visible");
+    }
+
+    ticking = false;
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!ticking) {
+        requestAnimationFrame(updateProgress);
+        ticking = true;
+      }
+    },
+    { passive: true }
+  );
+
+  updateProgress();
+});
+</script>

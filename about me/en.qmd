@@ -1,0 +1,135 @@
+---
+title: "About me"
+comments: false
+---
+
+{{< include ../_language_chooser.md >}}
+
+::: {.grid}
+
+::: {class="g-col-12 g-col-md-6"}
+
+I am **Philip** - coach, sport scientist, and someone who truly lives sport. Whether during **triathlon training**, on a **bikepacking tour** through the mountains, or while **whitewater kayaking**, movement is not just a hobby for me but a central part of my life.
+
+In my **research** as a sport scientist, I focus on fatigue and the use of modern **wearables** in endurance training, for example to measure muscle oxygen saturation. I combine this scientific perspective with many years of practical coaching experience.
+
+:::
+
+::: {class="g-col-12 g-col-md-6"}
+![](../images/img_01.jpg){.img-fluid .rounded}
+:::
+
+:::
+
+Already at the age of **14**, I started working as a swim coach. Since then, I have had the opportunity to work with athletes in very different areas: from **children’s swimming lessons** to **junior and professional triathlon**, as well as working as a **kayak guide**.
+
+This diversity strongly shapes my work – and it is exactly what I bring into my coaching.
+
+::: {.grid}
+
+::: {class="g-col-12 g-col-md-6"}
+![](../images/img_02.jpg){.img-fluid .rounded}
+:::
+
+::: {class="g-col-12 g-col-md-6"}
+## My Philosophy
+
+Sport should first and foremost be **enjoyable**. I enjoy working with ambitious athletes and optimizing the final details to achieve the best possible performance — but this is **not a requirement** for the athletes I work with. If you enjoy what you do — regardless of your athletic goals — personal success will naturally follow.
+
+That is why I work with **athletes who have very different goals**. Every situation requires an individual approach, and this is exactly the experience I bring to my coaching.
+:::
+:::
+
+::: {.grid}
+
+::: {class="g-col-12 g-col-md-6"}
+## Scientific Work
+
+As a PhD student in sport science at the **University of Rome "Foro Italico"**, I specialize in **endurance sports**, **exercise physiology**, and **performance diagnostics**.
+
+Through several of my own research projects, a research internship with Prof. **Stephen Seiler** - one of the leading experts in endurance training - and additional international collaborations, I have built a strong professional network.
+
+My work focuses on developing new methods in diagnostics, training monitoring, and training methodology. Translating scientific findings into practical coaching is particularly important to me.
+:::
+
+::: {class="g-col-12 g-col-md-6"}
+![](../images/img_03.jpg){.img-fluid .rounded}
+:::
+:::
+
+## Qualifications
+
+- M.Sc. High-Performance Sport, Saarland University  
+- Triathlon Coach License (C-License – Performance Sport)  
+- Fitness Trainer License (B-License)  
+- DLRG Instructor for Swimming & Lifesaving
+
+## Sporting Moments
+
+::: {.grid}
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](../images/img_04.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](../images/img_05.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](../images/img_12.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](../images/img_07.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](../images/img_08.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](../images/img_09.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](../images/img_10.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](../images/img_11.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](../images/img_06.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](../images/img_16.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](../images/img_14.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](../images/img_15.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](../images/img_13.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](../images/img_17.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](../images/img_18.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+::: {class="g-col-6 g-col-md-4 g-col-lg-3"}
+![](../images/img_19.jpg){.img-fluid .rounded .hover-zoom}
+:::
+
+:::

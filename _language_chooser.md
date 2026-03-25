@@ -1,12 +1,12 @@
 <ul id="choose-your-tool" class="nav nav-tabs mb-4" role="tablist">
   <li class="nav-item" role="presentation">
     <a class="nav-link" href="index.html">
-      <img src="images/flag_de.svg" width="24"> Deutsch
+      <img src="/images/flag_de.svg" width="24"> Deutsch
     </a>
   </li>
   <li class="nav-item" role="presentation">
     <a class="nav-link" href="en.html">
-      <img src="images/flag_en.svg" width="24"> English
+      <img src="/images/flag_en.svg" width="24"> English
     </a>
   </li>
 </ul>

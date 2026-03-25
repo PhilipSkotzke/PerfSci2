@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Blog – PS2</title>
+<title>Blog – PS²</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-2a12b63f0fb176c9b206a32fe913f9df.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-4c29405cabfbb95df166d851102d2528.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -133,10 +133,10 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Blog – PS2">
+<meta property="og:title" content="Blog – PS²">
 <meta property="og:description" content="Where sport science meets coaching practice.">
 <meta property="og:image" content="../posts/scientific-training/scientific-training-th.png">
-<meta property="og:site_name" content="PS<sup>2</sup>">
+<meta property="og:site_name" content="PS²">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -147,7 +147,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">PS<sup>2</sup></span>
+    <span class="navbar-title">PS²</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -220,7 +220,7 @@ window.Quarto = {
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Y29hY2hpbmc=" data-listing-date-sort="1775080800000" data-listing-file-modified-sort="1774091266882" data-listing-date-modified-sort="1775080800000" data-listing-reading-time-sort="5" data-listing-word-count-sort="988">
+<div class="quarto-post image-right" data-index="0" data-categories="Y29hY2hpbmc=" data-listing-date-sort="1775080800000" data-listing-file-modified-sort="1774449621853" data-listing-date-modified-sort="1775080800000" data-listing-reading-time-sort="6" data-listing-word-count-sort="1023">
 <div class="thumbnail"><a href="../posts/scientific-training/index.html" class="no-external">
 
 <img loading="lazy" src="../posts/scientific-training/scientific-training-th.png" class="thumbnail-image">
@@ -242,13 +242,132 @@ window.Quarto = {
 <div class="listing-author">
 Philip Skotzke
 </div>
-<div class="listing-reading-time">5 min</div>
+<div class="listing-reading-time">6 min</div>
 </a>
 </div>
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
+<div id="reading-progress-bar"></div>
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+
+  // Only run on blog posts stored in /posts/
+
+  const isPost = window.location.pathname.includes("/posts/");
+
+  if (!isPost) return;
+
+
+
+  const bar = document.getElementById("reading-progress-bar");
+
+
+
+  const titleBlock = document.querySelector(".quarto-title-block");
+
+
+
+  let startOffset = 0;
+
+
+
+  if (titleBlock) {
+
+    const rect = titleBlock.getBoundingClientRect();
+
+    startOffset = rect.top + window.scrollY + titleBlock.offsetHeight;
+
+  }
+
+
+
+  bar.classList.add("active");
+
+
+
+  let ticking = false;
+
+
+
+  function updateProgress() {
+
+    const scrollTop = window.scrollY;
+
+
+
+    const totalHeight =
+
+      document.documentElement.scrollHeight - window.innerHeight - startOffset;
+
+
+
+    const progress = Math.max(
+
+      0,
+
+      Math.min(100, ((scrollTop - startOffset) / totalHeight) * 100)
+
+    );
+
+
+
+    bar.style.width = progress + "%";
+
+
+
+    if (scrollTop > startOffset + 40) {
+
+      bar.classList.add("visible");
+
+    } else {
+
+      bar.classList.remove("visible");
+
+    }
+
+
+
+    ticking = false;
+
+  }
+
+
+
+  window.addEventListener(
+
+    "scroll",
+
+    function () {
+
+      if (!ticking) {
+
+        requestAnimationFrame(updateProgress);
+
+        ticking = true;
+
+      }
+
+    },
+
+    { passive: true }
+
+  );
+
+
+
+  updateProgress();
+
+});
+
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

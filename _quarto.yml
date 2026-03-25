@@ -5,7 +5,10 @@ website:
   title: "PS²"
   description: "Personal Website of Philip Skotzke, Performance Science Squared"
   image: /images/logo.png
-  open-graph: true # https://quarto.org/docs/websites/website-tools.html#open-graph
+  open-graph: # https://quarto.org/docs/websites/website-tools.html#open-graph
+    title: "PS²"
+    description: "Philip Skotzke - Performance Science²"
+    image: /images/logo.png
   page-footer: 
     left: |
       © 2026 Philip Skotzke
@@ -45,3 +48,4 @@ comments:
 format:
   html:
     theme: [cosmo, styles.scss]
+    include-after-body: scroll-progress.html
