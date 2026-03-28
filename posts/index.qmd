@@ -8,7 +8,7 @@ listing:
   categories: false
   sort-ui: false
   filter-ui: true
-  fields: [image, date, author, title, reading-time, description]
+  fields: [image, date, author, title, reading-time, description, categories]
 page-layout: full
 title-block-banner: false
 date-format: "DD.MM.YYYY"

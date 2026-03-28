@@ -263,7 +263,7 @@ Book a **free introductory session** and we’ll discuss your goals, current tra
 name="coaching-contact"
 method="POST"
 data-netlify="true"
-action="../thank-you.html"
+action="../thank-you-en.html"
 netlify-honeypot="bot-field">
 
 <input type="hidden" name="form-name" value="coaching-contact">

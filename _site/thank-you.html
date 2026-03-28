@@ -25,6 +25,7 @@ ul.task-list li input[type="checkbox"] {
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
+<link href=".//images/logo.png" rel="icon" type="image/png">
 <script src="site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -37,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2a12b63f0fb176c9b206a32fe913f9df.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-4c29405cabfbb95df166d851102d2528.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -53,6 +54,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-99JY86FLH4"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-99JY86FLH4', { 'anonymize_ip': true});
+</script>
 
 <script type="text/javascript" charset="UTF-8">
 document.addEventListener('DOMContentLoaded', function () {
@@ -74,7 +84,7 @@ cookieconsent.run({
 
 
 <meta property="og:title" content="Danke! – PS²">
-<meta property="og:description" content="Personal Website of Philip Skotzke, Performance Science Squared">
+<meta property="og:description" content="Philip Skotzke - Performance Science">
 <meta property="og:image" content="images/banner_thank_you.jpg">
 <meta property="og:site_name" content="PS²">
 </head>
@@ -154,6 +164,125 @@ Ich melde mich bald bei dir.</p>
 
 
 </main> <!-- /main -->
+<div id="reading-progress-bar"></div>
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+
+  // Only run on blog posts stored in /posts/
+
+  const isPost = window.location.pathname.includes("/posts/");
+
+  if (!isPost) return;
+
+
+
+  const bar = document.getElementById("reading-progress-bar");
+
+
+
+  const titleBlock = document.querySelector(".quarto-title-block");
+
+
+
+  let startOffset = 0;
+
+
+
+  if (titleBlock) {
+
+    const rect = titleBlock.getBoundingClientRect();
+
+    startOffset = rect.top + window.scrollY + titleBlock.offsetHeight;
+
+  }
+
+
+
+  bar.classList.add("active");
+
+
+
+  let ticking = false;
+
+
+
+  function updateProgress() {
+
+    const scrollTop = window.scrollY;
+
+
+
+    const totalHeight =
+
+      document.documentElement.scrollHeight - window.innerHeight - startOffset;
+
+
+
+    const progress = Math.max(
+
+      0,
+
+      Math.min(100, ((scrollTop - startOffset) / totalHeight) * 100)
+
+    );
+
+
+
+    bar.style.width = progress + "%";
+
+
+
+    if (scrollTop > startOffset + 40) {
+
+      bar.classList.add("visible");
+
+    } else {
+
+      bar.classList.remove("visible");
+
+    }
+
+
+
+    ticking = false;
+
+  }
+
+
+
+  window.addEventListener(
+
+    "scroll",
+
+    function () {
+
+      if (!ticking) {
+
+        requestAnimationFrame(updateProgress);
+
+        ticking = true;
+
+      }
+
+    },
+
+    { passive: true }
+
+  );
+
+
+
+  updateProgress();
+
+});
+
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
