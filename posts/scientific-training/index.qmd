@@ -3,8 +3,8 @@ title: "Scientific training: Concept, Misconception or Marketing?"
 description: 'Some coaches and athletes claim to follow "scientific training". What does that actually mean and does it really exist? A critical perspective.'
 author: "Philip Skotzke"
 image: "scientific-training-th.png"
-date: "4-02-2026"
-date-modified: "4-02-2026"
+date: "3-28-2026"
+date-modified: "3-28-2026"
 date-format: "DD MMM YYYY"
 draft: false # don't render post
 categories: [coaching]
