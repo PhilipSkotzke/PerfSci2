@@ -47,3 +47,4 @@ format:
   html:
     theme: [cosmo, styles.scss]
     include-after-body: scroll-progress.html
+    csl: apa.csl

@@ -1,0 +1,159 @@
+---
+title: "Science Translated: How reliable is your muscle oxygen saturation monitor?"
+description: "Wearables to measure muscle oxygen saturation (SmO~2~) are gaining popularity. This blog post discusses the study by Skotzke et al. (2024) and explains how you should -- and shouldn't -- use SmO~2~ in training."
+author: "Philip Skotzke"
+#image: "scientific-training-th.png"
+date: "5-10-2026"
+#date-modified: "3-28-2026"
+date-format: "DD MMM YYYY"
+draft: true # don't render post
+categories: [science]
+bibliography: references.bib
+---
+
+*This is the first blog post in the series **Science translated**, where I take scientific articles and explain what we can make of the topic in the applied sports world*
+
+------------------------------------------------------------------------
+
+A few days after I started writing this blog, news made the round^[posts by the5krunner.com on [Garmin](https://the5krunner.com/2026/04/11/garmin-leaks-trademarks-two-new-products-highly-likely/) and [Whoop](https://the5krunner.com/2026/04/13/whoop-muscle-oxygen-sensor-patent/)] that both Garmin and Whoop might extend their wearable offerings with devices to measure muscle oxygen saturation and provide the user with a *muscle battery* score. With two big players daring to invest into near-infrared spectroscopy, it becomes especially relevant to review some basics.
+
+> Before trusting any new wearable with your training decisions, it's worth asking: How reliable is the underlying measurement?
+
+Over the last decade endurance sport has seen a substantial rise of technological advances. Measurement devices previously only available for laboratory-based research become increasingly smaller and cheaper. Almost every runner nowadays has a GPS sports watch connected to a heart rate monitor. This already provides incredible insights into the work performed (what sport scientists call external load) and how the body responses to the work (called internal load).
+
+Heart rate is a global measure of how hard the body has to work during exercise. Thus, it can represent how hard you're working overall. If you push into the **red zone**, your heart rate is close to the maximum and you're close to fatiguing. As a global measure, heart rate does not allow us to understand what happens in the periphery - in the muscles that are actually working. This is where the technology called *near-infrared spectroscopy* (NIRS) comes in. These devices are placed on a muscle of interest to gain insights how oxygen - the source of sustainable endurance exercise - is used in that muscle. Adding an additional layer of information from the periphery may allow to improve how training is executed, potentially allowing to maximize the training stimulus or to train smarter.
+
+In this post, I will first cover the basics of the technology and then present the results of a scientific study: @skotzke2024 investigated the day-to-day variability of a wearable muscle oxygen saturation monitor and differences between left and right leg. This is important information for anyone considering to use NIRS in cycling or other endurance sports.
+
+[You are only interested in the practical relevance and implications for training? Jump straight to the section ⬇️](/posts/science-translated-muscle-oxygenation-in-training/index.qmd#practical-relevance){.link-box-acc}
+
+Disclaimer: The study presented in this blog was authored by myself. We bought the NIRS devices ourselves and don't have any conflict of interest to disclose. Everything written here presents my own thoughts.
+
+::: {.callout-tip collapse="true"}
+## Additional information for scientists
+
+With the goal to keep the blog post easy to understand for non-experts, I will add a few more technical comments in these callouts, hoping other scientists will find them helpful.
+:::
+
+## How NIRS works
+
+The basic principle is simple.
+
+As the name suggests, light in the near-infrared spectrum is sent into the muscle. Then, a detector measures the returning light. Based on the difference between how much light was sent into the muscle and the returning light measured, up to 4 parameters of the oxygenation status under the sensor can be calculated.
+
+This works because the oxygen transporting molecules -- hemoglobin and myoglobin -- have absorption spectra in the range of NIR light. If hemoglobin is transporting oxygen, it turns *red*[^2] and the light gets absorbed. If not enough oxygen is taken up in the lungs or more oxygen is used in the muscle, hemoglobin is without oxygen and does not absorb the same wavelengths.
+
+[^2]: this is a simplification
+
+Check out [this](https://www.linkedin.com/posts/artinis-medical-systems-b-v-_nirs-portamonmkiii-sportsscience-activity-7236734958856216578-ERJP/) nice animation from Artinis, one of the leading manufacturers of NIRS equipment.
+
+Many of the consumer based sensors report two measures: **Muscle oxygen saturation** (SmO~2~, sometimes called *tissue saturation index*, TSI or StO~2~) and **total hemoglobin** (THb). Let's briefly explain their interpretation:
+
+> SmO~2~ is the balance between oxygen delivery and utilization.
+
+SmO~2~ is a saturation measure and can (theoretically) range from 0 % to 100 %. When more oxygen is used than is delivered, SmO~2~ will drop. If delivery surpasses utilization - for example when we stop exercising - SmO~2~ goes up.
+
+As becomes evident, how SmO~2~ *changes* provides immense information on how external and internal load are related. To date, many research articles, coaches and athletes have focused on the SmO~2~ value itself. This is attractive: SmO~2~ can be easily displayed in real time on sports watches or bike computers.
+
+This is also what the study presented below investigated: How much does the SmO~2~ value vary from one day to another - when cycling at the same power.
+
+> Thb reflects the volume of blood under the sensor.
+
+Sometimes THb is mistakenly interpreted as *blood flow*. However, this is not correct and its relation to blood flow is more complicated[^3]. For this blog post, we will omit a more detailed discussion of THb.
+
+[^3]: interested readers can check @barstow2019 for necessary assumptions and application
+
+## Day-to-day variability of muscle oxygen saturation.
+
+When adopting new technology, it is important to perform a quality assessment[^4]. *Day-to-day repeatability* refers to the ability to obtain the same measurements under similar testing condition at different points in time.
+
+[^4]: read [this sports tech quality framework](https://strn.co/special-interest-group) for more information
+
+This is what @skotzke2024 investigated in cycling. In addition they compared SmO~2~ between the *vastus lateralis muscle*, one of the main locomotor muscles, between the left and right leg. Let's briefly review the study design.
+
+### Methods
+
+The study tested a group of 12 *male* cyclists and triathletes that were characterized as *trained*. This is important: They were used to cycling exercise, which makes them better at producing similar performances in repeated tests compared to untrained people.
+
+These 12 cyclists repeated a cycling exercise test commonly used in exercise testing: They started cycling at 1 watt per kilogram body weight for 5 minutes. Then, the power output was increased by 0.5 W/kg every 5 minutes. The test ended when the cyclist could not continue cycling. This test protocol was repeated with at least 2 days to recover and maximal 7 days between two tests to avoid training-induced improvements.
+
+This type of test design has a few advantages:
+
+-   the starting power output and increase were based on the athlete's weight, making it easier to compare results across athletes of different sizes.
+
+At the same time, it also has some disadvantages:
+
+-   Only fit males were tested. This presents a major limitation in transferring the results to females and less fit people. Unfortunately, as with many studies, only males showed interest in participating in this study. 
+
+Overall, it allowed to access a range of power outputs to characterize how SmO~2~ varies between 3 tests. For that, *SmO~2~ in the last minute of each stage was averaged*. The reason for this is that SmO~2~ needs some time to *stabilize*. Thus, the first part of the stage should be excluded.
+
+Then, SmO~2~ was compared **between tests** and **between the dominant and not-dominant leg**.[^5]. @fig-fig1 shows how the raw SmO~2~ for the dominant leg in one participant looks like.
+
+[^5]: for most participants, the right leg was the dominant
+
+![Figure 1 from @skotzke2024. An immediate drop in SmO~2~ can be observed when power output was increased. For most stages, SmO~2~ then stabilizes. The overall pattern is typical for an athlete with low adipose tissue thickness: SmO~2~ starts at around \~50 % and drops below 10 % at the end of the test.](EJAP_fig1.png){#fig-fig1 .img-fluid .rounded}
+
+## Results
+
+### Day-to-day variability of SmO~2~
+
+The day-to-day variability of SmO~2~ can be summarized in one single number:
+
+> SmO~2~ at the same power output varies by 5-7 % between repeated tests.
+
+This was the same for the left and right leg and at low and high power outputs.
+
+::: {.callout-tip collapse="true"}
+## Choosing the right statistical measure
+
+When investigating the absolute reliability, it is important to check if the data is homoscedastic or heteroscedastic. For SmO~2~, the test-retest difference is around \~6 % measurement units independent of its value. Therefore, if the coefficient of variation would have been calculated, it would increase at higher power outputs and with decreasing SmO~2~.
+
+This does not mean SmO~2~ gets less reliable at higher power outputs - it's the wrong way to look at the variability. Unfortunately, not all research studies test for heteroscedasticity and use the appropriate statistic based on the nature of the data.
+:::
+
+### Differences between the two legs
+
+The study did not find any *systematic* difference between the dominant and non-dominant leg.
+
+> On average, SmO~2~ was not different between legs. In this sample of athletes, SmO~2~ was merely 2 % lower in the dominant leg.
+
+However, it was found that the *random* (unsystematic) differences were quite large:
+
+> The differences in SmO~2~ could be 20 % lower **or** 20 % higher in the dominant leg compared to the non-dominant leg.
+
+The study did not try to explain why these large difference were observed. It could be the result of some actual differences or technical aspects of the measurement device.
+
+::: {.callout-tip collapse="true"}
+## Bland-Altman plots for repeated measurements
+
+Bland-Altman plots are a useful tool to compare two measures. In this study, the data across all power outputs and the three trials were pooled. Therefore, the limits of agreement must be adjusted for repeated observations of the same individual as outlined by @bland2007.
+
+This is a crucial step for the correct interpretation that often is forgotten.
+:::
+
+## Practical relevance
+
+The results of this study help to inform two important aspects for implementing NIRS in training:
+
+The first thing athletes will see once they connect a NIRS device to their sports watch or bike computer is SmO~2~. It is easy to target a specific value for your training session. However, I recommend to be careful with this approach.
+
+For example, the data shown in @fig-fig1 shows a range of SmO~2~ for this athlete from ~60 % at the beginning of the test to ~8 % at the end of the test. This gives this specific athlete a *functional range of 52 % points* on the SmO~2~ scale. The day-to-day variability is *6 % points*, which is almost 12 % of the athlete's functional range!
+
+> Consequently, targeting a specific SmO~2~ value might be less meaningful than you would want.
+
+The second question that this study informs is that the NIRS sensor can be placed on either leg - SmO~2~ will be similar. Of course, this only applies to healthy athletes and could be different when the athlete suspects to have any muscle weakness or blood flow impairment on one side. But for most, it won't really matter on which leg the sensor is positioned.
+
+## What this means
+
+My personal interpretation of this study -- supported by other studies investigating the reliability of the Moxy Monitor -- is that users should not **rely on absolute SmO~2~** in their training. A 6 % day-to-day variability in SmO~2~ is quite large, leaving room for errors in training execution.
+
+How will new NIRS sensors from Garmin and Whoop compare in accuracy and reproducibility? We don't know. However, the penetration depth of the light may be relevant for the quality of results we get. For wearable devices, this is inherently limited by the sensor size. Time will tell if new sensors can make improvements.
+
+## Where are we heading next?
+
+Another logical conclusion is as follows: Don't focus on the absolute SmO~2~ value. As mentioned above, the *change* in SmO~2~ may hold much more useful information than SmO~2~ itself. Research is pointing in this direction, suggesting that the SmO~2~ slope can be used to identify the maximal metabolic steady state -- or what is called threshold by many athletes. How fast SmO~2~ recovers after intervals might also have value.
+
+With the broader availability of NIRS, hopefully will the options to display and analyse the data *in real-time* evolve. Yes, there are some third-party Garmin Connect apps that do this already. However, I believe NIRS can only really take off when the use becomes much easier.
+
+## References
+

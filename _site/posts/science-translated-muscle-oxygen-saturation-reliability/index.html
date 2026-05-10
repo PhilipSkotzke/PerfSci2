@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Philip Skotzke">
+<meta name="dcterms.date" content="2026-05-10">
+<meta name="description" content="Wearables to measure muscle oxygen saturation (SmO2) are gaining popularity. This blog post discusses the study by Skotzke et al.&nbsp;(2024) and explains how you should – and shouldn’t – use SmO2 in training.">
+
+<title>Science Translated: How reliable is your muscle oxygen saturation monitor? – PS²</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../..//images/logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-4c29405cabfbb95df166d851102d2528.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-99JY86FLH4"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-99JY86FLH4', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"express",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"de"
+  });
+});
+</script> 
+  
+<meta name="quarto:status" content="draft">
+
+
+<meta property="og:title" content="Science Translated: How reliable is your muscle oxygen saturation monitor? – PS²">
+<meta property="og:description" content="Wearables to measure muscle oxygen saturation (SmO2) are gaining popularity. This blog post discusses the study by Skotzke et al.&nbsp;(2024) and explains how you should – and shouldn’t – use SmO2 in training.">
+<meta property="og:image" content="EJAP_fig1.png">
+<meta property="og:site_name" content="PS²">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">PS²</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts/index.html"> <i class="bi bi-vector-pen" role="img">
+</i> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../coaching/index.html"> <i class="bi bi-stopwatch" role="img">
+</i> 
+<span class="menu-text">Coaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about me/index.html"> 
+<span class="menu-text">About me</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <a href="https://linkedin.com/in/philip-skotzke/" title="" class="quarto-navigation-tool px-1" aria-label="" target="_blank"><i class="bi bi-linkedin"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Science Translated: How reliable is your muscle oxygen saturation monitor?</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">science</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Wearables to measure muscle oxygen saturation (SmO<sub>2</sub>) are gaining popularity. This blog post discusses the study by Skotzke et al.&nbsp;(2024) and explains how you should – and shouldn’t – use SmO<sub>2</sub> in training.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Philip Skotzke </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">10 May 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><em>This is the first blog post in the series <strong>Science translated</strong>, where I take scientific articles and explain what we can make of the topic in the applied sports world</em></p>
+<hr>
+<p>A few days after I started writing this blog, news made the round<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> that both Garmin and Whoop might extend their wearable offerings with devices to measure muscle oxygen saturation and provide the user with a <em>muscle battery</em> score. With two big players daring to invest into near-infrared spectroscopy, it becomes especially relevant to review some basics.</p>
+<blockquote class="blockquote">
+<p>Before trusting any new wearable with your training decisions, it’s worth asking: How reliable is the underlying measurement?</p>
+</blockquote>
+<p>Over the last decade endurance sport has seen a substantial rise of technological advances. Measurement devices previously only available for laboratory-based research become increasingly smaller and cheaper. Almost every runner nowadays has a GPS sports watch connected to a heart rate monitor. This already provides incredible insights into the work performed (what sport scientists call external load) and how the body responses to the work (called internal load).</p>
+<p>Heart rate is a global measure of how hard the body has to work during exercise. Thus, it can represent how hard you’re working overall. If you push into the <strong>red zone</strong>, your heart rate is close to the maximum and you’re close to fatiguing. As a global measure, heart rate does not allow us to understand what happens in the periphery - in the muscles that are actually working. This is where the technology called <em>near-infrared spectroscopy</em> (NIRS) comes in. These devices are placed on a muscle of interest to gain insights how oxygen - the source of sustainable endurance exercise - is used in that muscle. Adding an additional layer of information from the periphery may allow to improve how training is executed, potentially allowing to maximize the training stimulus or to train smarter.</p>
+<p>In this post, I will first cover the basics of the technology and then present the results of a scientific study: <span class="citation" data-cites="skotzke2024">Skotzke et al. (<a href="#ref-skotzke2024" role="doc-biblioref">2024</a>)</span> investigated the day-to-day variability of a wearable muscle oxygen saturation monitor and differences between left and right leg. This is important information for anyone considering to use NIRS in cycling or other endurance sports.</p>
+<p><a href="../..\posts/science-translated-muscle-oxygenation-in-training/index.qmd#practical-relevance" class="link-box-acc">You are only interested in the practical relevance and implications for training? Jump straight to the section ⬇️</a></p>
+<p>Disclaimer: The study presented in this blog was authored by myself. We bought the NIRS devices ourselves and don’t have any conflict of interest to disclose. Everything written here presents my own thoughts.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Additional information for scientists
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>With the goal to keep the blog post easy to understand for non-experts, I will add a few more technical comments in these callouts, hoping other scientists will find them helpful.</p>
+</div>
+</div>
+</div>
+<section id="how-nirs-works" class="level2">
+<h2 class="anchored" data-anchor-id="how-nirs-works">How NIRS works</h2>
+<p>The basic principle is simple.</p>
+<p>As the name suggests, light in the near-infrared spectrum is sent into the muscle. Then, a detector measures the returning light. Based on the difference between how much light was sent into the muscle and the returning light measured, up to 4 parameters of the oxygenation status under the sensor can be calculated.</p>
+<p>This works because the oxygen transporting molecules – hemoglobin and myoglobin – have absorption spectra in the range of NIR light. If hemoglobin is transporting oxygen, it turns <em>red</em><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> and the light gets absorbed. If not enough oxygen is taken up in the lungs or more oxygen is used in the muscle, hemoglobin is without oxygen and does not absorb the same wavelengths.</p>
+<p>Check out <a href="https://www.linkedin.com/posts/artinis-medical-systems-b-v-_nirs-portamonmkiii-sportsscience-activity-7236734958856216578-ERJP/">this</a> nice animation from Artinis, one of the leading manufacturers of NIRS equipment.</p>
+<p>Many of the consumer based sensors report two measures: <strong>Muscle oxygen saturation</strong> (SmO<sub>2</sub>, sometimes called <em>tissue saturation index</em>, TSI or StO<sub>2</sub>) and <strong>total hemoglobin</strong> (THb). Let’s briefly explain their interpretation:</p>
+<blockquote class="blockquote">
+<p>SmO<sub>2</sub> is the balance between oxygen delivery and utilization.</p>
+</blockquote>
+<p>SmO<sub>2</sub> is a saturation measure and can (theoretically) range from 0 % to 100 %. When more oxygen is used than is delivered, SmO<sub>2</sub> will drop. If delivery surpasses utilization - for example when we stop exercising - SmO<sub>2</sub> goes up.</p>
+<p>As becomes evident, how SmO<sub>2</sub> <em>changes</em> provides immense information on how external and internal load are related. To date, many research articles, coaches and athletes have focused on the SmO<sub>2</sub> value itself. This is attractive: SmO<sub>2</sub> can be easily displayed in real time on sports watches or bike computers.</p>
+<p>This is also what the study presented below investigated: How much does the SmO<sub>2</sub> value vary from one day to another - when cycling at the same power.</p>
+<blockquote class="blockquote">
+<p>Thb reflects the volume of blood under the sensor.</p>
+</blockquote>
+<p>Sometimes THb is mistakenly interpreted as <em>blood flow</em>. However, this is not correct and its relation to blood flow is more complicated<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. For this blog post, we will omit a more detailed discussion of THb.</p>
+</section>
+<section id="day-to-day-variability-of-muscle-oxygen-saturation." class="level2">
+<h2 class="anchored" data-anchor-id="day-to-day-variability-of-muscle-oxygen-saturation.">Day-to-day variability of muscle oxygen saturation.</h2>
+<p>When adopting new technology, it is important to perform a quality assessment<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. <em>Day-to-day repeatability</em> refers to the ability to obtain the same measurements under similar testing condition at different points in time.</p>
+<p>This is what <span class="citation" data-cites="skotzke2024">Skotzke et al. (<a href="#ref-skotzke2024" role="doc-biblioref">2024</a>)</span> investigated in cycling. In addition they compared SmO<sub>2</sub> between the <em>vastus lateralis muscle</em>, one of the main locomotor muscles, between the left and right leg. Let’s briefly review the study design.</p>
+<section id="methods" class="level3">
+<h3 class="anchored" data-anchor-id="methods">Methods</h3>
+<p>The study tested a group of 12 <em>male</em> cyclists and triathletes that were characterized as <em>trained</em>. This is important: They were used to cycling exercise, which makes them better at producing similar performances in repeated tests compared to untrained people.</p>
+<p>These 12 cyclists repeated a cycling exercise test commonly used in exercise testing: They started cycling at 1 watt per kilogram body weight for 5 minutes. Then, the power output was increased by 0.5 W/kg every 5 minutes. The test ended when the cyclist could not continue cycling. This test protocol was repeated with at least 2 days to recover and maximal 7 days between two tests to avoid training-induced improvements.</p>
+<p>This type of test design has a few advantages:</p>
+<ul>
+<li>the starting power output and increase were based on the athlete’s weight, making it easier to compare results across athletes of different sizes.</li>
+</ul>
+<p>At the same time, it also has some disadvantages:</p>
+<ul>
+<li>Only fit males were tested. This presents a major limitation in transferring the results to females and less fit people. Unfortunately, as with many studies, only males showed interest in participating in this study.</li>
+</ul>
+<p>Overall, it allowed to access a range of power outputs to characterize how SmO<sub>2</sub> varies between 3 tests. For that, <em>SmO<sub>2</sub> in the last minute of each stage was averaged</em>. The reason for this is that SmO<sub>2</sub> needs some time to <em>stabilize</em>. Thus, the first part of the stage should be excluded.</p>
+<p>Then, SmO<sub>2</sub> was compared <strong>between tests</strong> and <strong>between the dominant and not-dominant leg</strong>.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. <a href="#fig-fig1" class="quarto-xref">Figure&nbsp;1</a> shows how the raw SmO<sub>2</sub> for the dominant leg in one participant looks like.</p>
+<div id="fig-fig1" class="img-fluid rounded quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="EJAP_fig1.png" class="img-fluid rounded figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Figure 1 from <span class="citation" data-cites="skotzke2024">Skotzke et al. (<a href="#ref-skotzke2024" role="doc-biblioref">2024</a>)</span>. An immediate drop in SmO<sub>2</sub> can be observed when power output was increased. For most stages, SmO<sub>2</sub> then stabilizes. The overall pattern is typical for an athlete with low adipose tissue thickness: SmO<sub>2</sub> starts at around ~50 % and drops below 10 % at the end of the test.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<section id="day-to-day-variability-of-smo2" class="level3">
+<h3 class="anchored" data-anchor-id="day-to-day-variability-of-smo2">Day-to-day variability of SmO<sub>2</sub></h3>
+<p>The day-to-day variability of SmO<sub>2</sub> can be summarized in one single number:</p>
+<blockquote class="blockquote">
+<p>SmO<sub>2</sub> at the same power output varies by 5-7 % between repeated tests.</p>
+</blockquote>
+<p>This was the same for the left and right leg and at low and high power outputs.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Choosing the right statistical measure
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>When investigating the absolute reliability, it is important to check if the data is homoscedastic or heteroscedastic. For SmO<sub>2</sub>, the test-retest difference is around ~6 % measurement units independent of its value. Therefore, if the coefficient of variation would have been calculated, it would increase at higher power outputs and with decreasing SmO<sub>2</sub>.</p>
+<p>This does not mean SmO<sub>2</sub> gets less reliable at higher power outputs - it’s the wrong way to look at the variability. Unfortunately, not all research studies test for heteroscedasticity and use the appropriate statistic based on the nature of the data.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="differences-between-the-two-legs" class="level3">
+<h3 class="anchored" data-anchor-id="differences-between-the-two-legs">Differences between the two legs</h3>
+<p>The study did not find any <em>systematic</em> difference between the dominant and non-dominant leg.</p>
+<blockquote class="blockquote">
+<p>On average, SmO<sub>2</sub> was not different between legs. In this sample of athletes, SmO<sub>2</sub> was merely 2 % lower in the dominant leg.</p>
+</blockquote>
+<p>However, it was found that the <em>random</em> (unsystematic) differences were quite large:</p>
+<blockquote class="blockquote">
+<p>The differences in SmO<sub>2</sub> could be 20 % lower <strong>or</strong> 20 % higher in the dominant leg compared to the non-dominant leg.</p>
+</blockquote>
+<p>The study did not try to explain why these large difference were observed. It could be the result of some actual differences or technical aspects of the measurement device.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Bland-Altman plots for repeated measurements
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Bland-Altman plots are a useful tool to compare two measures. In this study, the data across all power outputs and the three trials were pooled. Therefore, the limits of agreement must be adjusted for repeated observations of the same individual as outlined by <span class="citation" data-cites="bland2007">Bland &amp; Altman (<a href="#ref-bland2007" role="doc-biblioref">2007</a>)</span>.</p>
+<p>This is a crucial step for the correct interpretation that often is forgotten.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="practical-relevance" class="level2">
+<h2 class="anchored" data-anchor-id="practical-relevance">Practical relevance</h2>
+<p>The results of this study help to inform two important aspects for implementing NIRS in training:</p>
+<p>The first thing athletes will see once they connect a NIRS device to their sports watch or bike computer is SmO<sub>2</sub>. It is easy to target a specific value for your training session. However, I recommend to be careful with this approach.</p>
+<p>For example, the data shown in <a href="#fig-fig1" class="quarto-xref">Figure&nbsp;1</a> shows a range of SmO<sub>2</sub> for this athlete from ~60 % at the beginning of the test to ~8 % at the end of the test. This gives this specific athlete a <em>functional range of 52 % points</em> on the SmO<sub>2</sub> scale. The day-to-day variability is <em>6 % points</em>, which is almost 12 % of the athlete’s functional range!</p>
+<blockquote class="blockquote">
+<p>Consequently, targeting a specific SmO<sub>2</sub> value might be less meaningful than you would want.</p>
+</blockquote>
+<p>The second question that this study informs is that the NIRS sensor can be placed on either leg - SmO<sub>2</sub> will be similar. Of course, this only applies to healthy athletes and could be different when the athlete suspects to have any muscle weakness or blood flow impairment on one side. But for most, it won’t really matter on which leg the sensor is positioned.</p>
+</section>
+<section id="what-this-means" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-means">What this means</h2>
+<p>My personal interpretation of this study – supported by other studies investigating the reliability of the Moxy Monitor – is that users should not <strong>rely on absolute SmO<sub>2</sub></strong> in their training. A 6 % day-to-day variability in SmO<sub>2</sub> is quite large, leaving room for errors in training execution.</p>
+<p>How will new NIRS sensors from Garmin and Whoop compare in accuracy and reproducibility? We don’t know. However, the penetration depth of the light may be relevant for the quality of results we get. For wearable devices, this is inherently limited by the sensor size. Time will tell if new sensors can make improvements.</p>
+</section>
+<section id="where-are-we-heading-next" class="level2">
+<h2 class="anchored" data-anchor-id="where-are-we-heading-next">Where are we heading next?</h2>
+<p>Another logical conclusion is as follows: Don’t focus on the absolute SmO<sub>2</sub> value. As mentioned above, the <em>change</em> in SmO<sub>2</sub> may hold much more useful information than SmO<sub>2</sub> itself. Research is pointing in this direction, suggesting that the SmO<sub>2</sub> slope can be used to identify the maximal metabolic steady state – or what is called threshold by many athletes. How fast SmO<sub>2</sub> recovers after intervals might also have value.</p>
+<p>With the broader availability of NIRS, hopefully will the options to display and analyse the data <em>in real-time</em> evolve. Yes, there are some third-party Garmin Connect apps that do this already. However, I believe NIRS can only really take off when the use becomes much easier.</p>
+</section>
+<section id="references" class="level2">
+
+
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-barstow2019" class="csl-entry" role="listitem">
+Barstow, T. J. (2019). Understanding near infrared spectroscopy and its application to skeletal muscle research. <em>Journal of Applied Physiology</em>, <em>126</em>(5), 1360–1376. <a href="https://doi.org/10.1152/japplphysiol.00166.2018">https://doi.org/10.1152/japplphysiol.00166.2018</a>
+</div>
+<div id="ref-bland2007" class="csl-entry" role="listitem">
+Bland, J. M., &amp; Altman, D. G. (2007). Agreement between methods of measurement with multiple observations per individual. <em>Journal of Biopharmaceutical Statistics</em>, <em>17</em>(4), 571582. <a href="https://doi.org/10.1080/10543400701329422">https://doi.org/10.1080/10543400701329422</a>
+</div>
+<div id="ref-skotzke2024" class="csl-entry" role="listitem">
+Skotzke, P., Schwindling, S., &amp; Meyer, T. (2024). Side differences and reproducibility of the Moxy muscle oximeter during cycling in trained men. <em>European Journal of Applied Physiology</em>, <em>124</em>(10), 3075–3083. <a href="https://doi.org/10.1007/s00421-024-05514-2">https://doi.org/10.1007/s00421-024-05514-2</a>
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>posts by the5krunner.com on <a href="https://the5krunner.com/2026/04/11/garmin-leaks-trademarks-two-new-products-highly-likely/">Garmin</a> and <a href="https://the5krunner.com/2026/04/13/whoop-muscle-oxygen-sensor-patent/">Whoop</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>this is a simplification<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>interested readers can check <span class="citation" data-cites="barstow2019">Barstow (<a href="#ref-barstow2019" role="doc-biblioref">2019</a>)</span> for necessary assumptions and application<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>read <a href="https://strn.co/special-interest-group">this sports tech quality framework</a> for more information<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>for most participants, the right leg was the dominant<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<div id="reading-progress-bar"></div>
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+
+  // Only run on blog posts stored in /posts/
+
+  const isPost = window.location.pathname.includes("/posts/");
+
+  if (!isPost) return;
+
+
+
+  const bar = document.getElementById("reading-progress-bar");
+
+
+
+  const titleBlock = document.querySelector(".quarto-title-block");
+
+
+
+  let startOffset = 0;
+
+
+
+  if (titleBlock) {
+
+    const rect = titleBlock.getBoundingClientRect();
+
+    startOffset = rect.top + window.scrollY + titleBlock.offsetHeight;
+
+  }
+
+
+
+  bar.classList.add("active");
+
+
+
+  let ticking = false;
+
+
+
+  function updateProgress() {
+
+    const scrollTop = window.scrollY;
+
+
+
+    const totalHeight =
+
+      document.documentElement.scrollHeight - window.innerHeight - startOffset;
+
+
+
+    const progress = Math.max(
+
+      0,
+
+      Math.min(100, ((scrollTop - startOffset) / totalHeight) * 100)
+
+    );
+
+
+
+    bar.style.width = progress + "%";
+
+
+
+    if (scrollTop > startOffset + 40) {
+
+      bar.classList.add("visible");
+
+    } else {
+
+      bar.classList.remove("visible");
+
+    }
+
+
+
+    ticking = false;
+
+  }
+
+
+
+  window.addEventListener(
+
+    "scroll",
+
+    function () {
+
+      if (!ticking) {
+
+        requestAnimationFrame(updateProgress);
+
+        ticking = true;
+
+      }
+
+    },
+
+    { passive: true }
+
+  );
+
+
+
+  updateProgress();
+
+});
+
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "PhilipSkotzke/PerfSci2";
+    script.dataset.repoId = "R_kgDORhf_Gg";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDORhf_Gs4C38rZ";
+    script.dataset.mapping = "title";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Philip Skotzke</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Performance Science Squared</p>
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

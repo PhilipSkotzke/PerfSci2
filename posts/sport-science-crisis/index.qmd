@@ -1,0 +1,122 @@
+---
+title: "Sport Science has a crisis - and no one is talking about it"
+description: "With the lack of reproducibility, credibility and usefulness of sport science research is under threat."
+author: "Philip Skotzke"
+#image: "scientific-training-th.png"
+date: "4-25-2026"
+#date-modified: "4-28-2026"
+date-format: "DD MMM YYYY"
+draft: true # don't render post
+categories: [coaching]
+bibliography: references.bib
+---
+
+The title of this post is deliberately provocative.
+
+Not the first part about the crisis, but the idea that no one is talking about it.
+
+> Spor Science has a credibility problem
+
+The replication rate of sport science articles was found to be 28%. To put this into perspective, a replication rate of 38% in psychology has lead to a big uproar in their discipline, followed by many structural changes that are put in place.
+
+The worst part?
+
+> Sport science may perform **worse** than other fields.
+
+Coaches rely on national funded research on training to prepare athletes for winning olympic medals.
+
+Recreational athletes trust recommendation and waste time and money following fads instead of what works. (this problem is excaberated by influencers sharing training advise that cannot even correctly interpret existing research).
+
+Exercise is a major component of the public health strategy. We not only need to make sure policies are effective, but also manage to keep trust in science.
+
+## The facts
+
+The field of *metascience* has emerged to study science itself.\^\[Note: Metascience itself lacks a clear definition. For a discussion, listen to the Podcast by Lakens (ref)\] Researching science has produced its own terminology, which can seem confusing if you are new to metascience. Before diving into the problems of sport science, I'll start with defining key terms I use.
+
+The data is clear. Sport science research lacks replicability. Almost a year ago, in June 2026 @murphy2025 published the results of the (first) replication study in sport science. The main finding? Only 28% of 25 full replications could be robustly replicated. **This is alarming.** The project followed previous work done in other fields, lead by psychology in the 2010s. Following these initial reports \[ref\], psychology has (more or less) declared a *replication crisis* as only 38% of studies could be replicated. The cross-disciplinary trend is continuing. Just recently the results of the SCORE (Systematizing Confidence in Open Research and Evidence) project in the social and behavioral sciences has been published.
+
+As a field, we should start talking about this more seriously and work on solutions to produce meaningful research with a positive impact for anyone doing sports - from world-class athletes searching for marginal performance gains to the general population aiming to get the best bang-for-their-buck health wise.
+
+### Terminology
+
+Reproducibility
+
+Replicability
+
+Reliability
+
+Effect size
+
+confirmatory research
+
+exploratory research
+
+...
+
+For more details, please read these articles (ref).
+
+### Findings in sport science
+
+replication rate
+
+study quality
+
+interpretation and extrapolation (confirmatory and exploratory research)
+
+### Comparison to other fields
+
+psychology
+
+social & behavioral sciences
+
+interpret differences
+
+## Why is our discipline remaining silent?
+
+Last year in July I was at the ECSS in Rimini. At that time I was a Master's student who was shocked reading @murphy2025 a few weeks earlier. I thought the paper should have ignited a lot of debate at the conference - one of the biggest sport science conferences after all. Only to find a complete absence of the topic. Personally, I was lucky to catch a poster by Massimilliano . Our discussion turned into a plan to apply for funding for a PhD on the role of exploratory research in sport science and researcher behavior. Life took a different turn for me and I started my PhD at University of Rome "Foro Italico". Still, sometimes I regret that I didn't choose to follow a path where I could've had a more direct impact on improving our field.
+
+lack of education:
+
+-   poor understanding of statistics -\> QRP
+-   methodolgy
+-   exploratory treated as confirmatory
+
+personal incentives
+
+-   career versus scientific curiosity
+
+-   publish or perish,
+
+-   novelty\>quality
+
+institutional issues
+
+-   Journals select for novelty/own benefits
+
+-   peer review rejects replications
+
+-   funding structurs
+
+include refs
+
+This sounds very negative and bad? Because it is! Luckily we can look toward a better future.
+
+## The optimistic view forward
+
+We have teams looking at the issues
+
+A lot of improvements are happening
+
+Many people do good work already, but not enough. For example Werner Pitsch, ...
+
+-\> Open Science movment: preprint, code/data sharing (OSF), open peer-review, open access
+
+-\> replication initiatives
+
+-\> better statistics education
+
+-\> journal requirements change
+
+I want to interpret this as a **self-correcting** behavior of the field, with a positive multiplication effect: The more people start to adopt better practices, the more will follow.
+
+I just hope it is not only **us as a new generation** of scientists that is pushing for change, fighting against the establishment.
