@@ -11,7 +11,7 @@ categories: [science communication]
 bibliography: references.bib
 ---
 
-*This is the first blog post in the series **Science translated**, where I take scientific articles and explain how it can inform practices in the applied sports world*
+*This is the first blog post in the series **Science translated**, where I take scientific articles and explain how they can inform practices in the applied sports world*.
 
 ------------------------------------------------------------------------
 
@@ -23,7 +23,7 @@ A few days after I started writing this blog, news made the round[^1] that both 
 
 > Before trusting any new wearable with your training decisions, it's worth asking: How reliable is the underlying measurement?
 
-Over the last decade endurance sport has seen a substantial rise of technological advances. Measurement devices previously only available for laboratory-based research become increasingly smaller and cheaper. Almost every runner nowadays has a GPS sports watch connected to a heart rate monitor. Many cyclists have a power meter. This already provides incredible insights into the work performed (what sport scientists call external load) and how the body responses to the work (called internal load).
+Over the last decade endurance sport has seen a substantial rise of technological advances. Measurement devices previously only available for laboratory-based research become increasingly smaller and cheaper. Almost every runner nowadays has a GPS sports watch connected to a heart rate monitor. Many cyclists have a power meter. This already provides incredible insights into the work performed (what sport scientists call external load) and how the body responds to the work (called internal load).
 
 Heart rate is a global measure of how hard the body has to work during exercise. Thus, it can represent how hard you're working overall. If you push into the **red zone**, your heart rate is close to the maximum and you won't be able to continue exercising for long. As a global measure, heart rate does not allow us to understand what happens in the periphery - in the muscles that are actually working. This is where the technology called *near-infrared spectroscopy* (NIRS) comes in. These devices are placed on a muscle of interest to gain insights how oxygen -- the source of sustainable endurance exercise -- is used in that muscle. Adding an additional layer of information from the periphery may allow to improve how training is executed, potentially allowing to maximize the training stimulus or to train smarter.
 
@@ -128,7 +128,7 @@ However, it was found that the *random* (unsystematic) differences were quite la
 
 > The differences in SmO~2~ could be 20 % lower **or** 20 % higher in the dominant leg compared to the non-dominant leg.
 
-The study did not try to explain why these large difference were observed. It could be the result of some actual differences or technical aspects of the measurement.
+The study did not try to explain why these large differences were observed. It could be the result of some actual differences or technical aspects of the measurement.
 
 ::: {.callout-tip collapse="true"}
 ## Bland-Altman plots for repeated measurements
@@ -162,7 +162,7 @@ We don't know. However, the penetration depth of the light may be relevant for t
 
 Another logical conclusion is as follows: Don't focus on the absolute SmO~2~ value. As mentioned above, the *change* in SmO~2~ may hold much more useful information than SmO~2~ itself. Research is pointing in this direction, suggesting that the SmO~2~ slope can be used to identify the maximal metabolic steady state[^6] -- or what is called threshold by many athletes. What this looks like in training can be seen in @fig-workout.
 
-![A screenshot from [intervals.icu](https://intervals.icu) showing how SmO~2~ (in pink) develops during 3x10 minutes uphill intervals. A neutral slope during intervals #1 & #2 suggests a steady state, while in interval #3 SmO~2~ continuously falls - did I cross the maximum metabolic steady state?](example_slope.png){#fig-workout .img-fluid .rounded}
+![A screenshot from [intervals.icu](https://intervals.icu) showing how SmO~2~ (at the bottom) develops during 3x10 minutes uphill intervals. A neutral slope during intervals #1 & #2 suggests a steady state, while in interval #3 SmO~2~ continuously falls - did I cross the maximum metabolic steady state?](example_slope.png){#fig-workout .img-fluid .rounded}
 
 How fast SmO~2~ recovers after intervals might also have value[^7], and the time at low SmO~2~ could be a good measure of stimulus for training adaptations on the muscle level[^8].
 
