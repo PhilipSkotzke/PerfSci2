@@ -4,7 +4,7 @@ description: "Measuring muscle oxygen saturation is coming to Garmin and Whoop. 
 author: "Philip Skotzke"
 image: "MoxyCycling.jpg"
 date: "5-13-2026"
-#date-modified: "5-12-2026"
+#date-modified: "5-13-2026"
 date-format: "DD MMM YYYY"
 draft: false # don't render post
 categories: [science communication]
@@ -92,7 +92,7 @@ At the same time, it also has some disadvantages:
 -   Only fit males were tested. This presents a major limitation in transferring the results to females and less fit people. How much fat tissue is between the sensor and the muscle affects the readings negatively. Females and less fit individuals usually have a thicker fat tissue layer. Consequently, it is difficult to conclude if the results apply to those groups as well.
 -   Even though the stages were 5 minutes long, the protocol does not reflect prolonged cycling. Is the stabilized SmO~2~ representative of SmO~2~ after 30 minutes? The study cannot answer this.
 
-Overall, it allowed to access a range of power outputs to characterize how SmO~2~ varies between 3 tests. For that, *SmO~2~ in the last minute of each stage was averaged*. As indicated above, the reason for this is that SmO~2~ is more *stable*. Thus, the first part of the stage  was excluded.
+Overall, the study allowed us to compare a large range of power outputs, and to characterize how SmO~2~ varies between 3 tests. For that, *SmO~2~ in the last minute of each stage was averaged*. As indicated above, the reason for this is that SmO~2~ is more *stable*. Thus, the first part of the stage  was excluded.
 
 Then, SmO~2~ was compared **between tests** and **between the dominant and not-dominant leg**.[^5]. @fig-fig1 shows how the raw SmO~2~ for the dominant leg in one participant looks like.
 
@@ -148,7 +148,7 @@ For example, the data shown in @fig-fig1 shows a range of SmO~2~ from \~60 % at 
 
 > Consequently, targeting a specific SmO~2~ value might be less meaningful than you would want.
 
-The second question that this study informs is that the NIRS sensor can be placed on either leg - SmO~2~ will be similar. Of course, this only applies to healthy athletes and could be different when the athlete suspects to have any muscle weakness or blood flow impairment on one side. But for most, we don't have reason to believe that it really matters on which leg the sensor is positioned.
+Secondly, this study informs us that the NIRS sensor can be placed on either leg - SmO~2~ will be similar. Of course, this only applies to healthy athletes and could be different when the athlete suspects to have any muscle weakness or blood flow impairment on one side. But for most, we don't have reason to believe that it really matters on which leg the sensor is positioned.
 
 ## What this means
 
